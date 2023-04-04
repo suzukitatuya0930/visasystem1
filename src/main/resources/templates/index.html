@@ -6,13 +6,16 @@
 </head >
 <body >
 <h1>ログイン</h1>
+<div th:if="${name}">
+  <h1 th:text="${name}"></h1>
+</div>
 
 <form th:action="@{/user/login}" method="post" >
 
  <div class="form-group">
         <label for="msg">メールアドレス</label>
         <br>
-        <input type="input" class="form-control" id="address" name="address" placeholder="メールアドレスを入力">
+        <input type="input" class="form-control" id="email" name="email" placeholder="メールアドレスを入力">
     </div>
     <div class="form-group">
         <label for="sender">パスワード</label>

@@ -10,9 +10,11 @@ public class NewUserModel implements Serializable {
 
 	private String name;
 	private String password;
-	private String address;
+	private String email;
 	private String visa;
 	private String visatype;
+	
+	
 	
 	
 

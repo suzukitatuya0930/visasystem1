@@ -10,15 +10,18 @@ import com.example.demo.service.NewUserService;
 @Service
 public class NewUserImpl implements NewUserService {
 	 @Resource
-	    private NewUserMapper mapper;
-	@Override
-	public Object insert(NewUserModel newUser) {
-		// TODO 自動生成されたメソッド・スタブ
-		return mapper.insert(newUer);
-	}
-	public int search(NewUserModel newUer) {
+	 private NewUserMapper mapper;
+	 
 
-        return mapper.search(newUer);
+	public Object insert(NewUserModel newUser) {
+		
+		return mapper.insert(newUser);
+	}
+	
+	
+	public int search(NewUserModel newUser) {
+
+        return mapper.search(newUser);
     }
 	
 }
