@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>visasystemtest</artifactId>
+	<artifactId>visa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>visasystemtest</name>
+	<name>visa</name>
 	<description>visa</description>
 	<properties>
 		<java.version>11</java.version>
