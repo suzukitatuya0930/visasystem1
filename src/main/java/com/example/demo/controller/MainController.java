@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.model.LoginUserModel;
 import com.example.demo.model.NewUserModel;
+import com.example.demo.service.LoginUserService;
 import com.example.demo.service.NewUserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 
 public class MainController {
+	
 	//ログイン画面から新規登録
 	@RequestMapping("/signup")
     public String signup() {
@@ -37,7 +40,7 @@ public class MainController {
 		  if(count  == 0){
 			 newUserService.insert(newUserModel);
 	       model.addAttribute("name","登録完了");
-	     
+	       																																																																																																																																																																															
 	       return "index";
 			
 		 }else {
@@ -51,27 +54,28 @@ public class MainController {
 	
 	
 	
-//	@Resource
-//	private LoginUserService loginUserServie;
-//	@PostMapping("/login")
-//	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model) {
-//		 //idとパスワードが合っているか判断
-//		//間違ってた場合login画面へ合っていたら,マイページへ
-//		  int count =  (int)loginUserServie.count(loginUserModel);
-//		  if(count  == 0 ) {
-//			  model.addAttribute("error","エラー");
-//			  
-//			  return "login";
-//			  
-//		 }else {
-//			 return "mypage";//マイページ
-//		
-//	}
-//	
-//	
-//		  
-//		  
-//}
+	@Resource
+	private LoginUserService loginUserServie;
+	@PostMapping("/login")
+	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model) {
+		 //idとパスワードが合っているか判断
+		//間違ってた場合login画面へ合っていたら,マイページへ
+		  int count =  (int)loginUserServie.count(loginUserModel);
+		  if(count  == 0 ) {
+			  model.addAttribute("error","エラー");
+			  
+			  return "indexs";
+			  
+		 }else {
+			 
+			 return "mypage";//マイページ
+		
+	}
+	
+	
+		  
+		  
+}
 }
 
 

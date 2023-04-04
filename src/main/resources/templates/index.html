@@ -1,35 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head >
     <meta charset="UTF-8" >
-    <title >Title</title >
+    <title >Login</title >	
+ <style>
+		body {
+			background-color: lightslategrey;
+			font-family: Arial, sans-serif;
+		}
+		form {
+			background-color: lemonchiffon;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 300px;
+			margin: 0 auto;
+		}
+		label, input {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="email"], input[type="password"] {
+			padding: 10px;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+		button[type="submit"]{
+			background-color: red;
+			color: white;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	</style>
 </head >
+
+
 <body >
-<h1>ログイン</h1>
-<div th:if="${name}">
-  <h1 th:text="${name}"></h1>
+
+ <h1><center>ログイン画面</center></h1>
 </div>
 
-<form th:action="@{/user/login}" method="post" >
+<form th:action="@{/user/login}"method="POST">
+ <div th:if="${msg}">
+  <h1 id="notify" th:text="${msg}"></h1>
+</div>
+	 <p>
+        <label for="email">Email：</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレスを入力してください">
+    </p>
+     <p>
+        <label for="password">Password：</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="パスワードを入力してください">
+    </p>
+   
 
- <div class="form-group">
-        <label for="msg">メールアドレス</label>
-        <br>
-        <input type="input" class="form-control" id="email" name="email" placeholder="メールアドレスを入力">
+    <button type="submit">ログイン</button>
+  
+
+新規登録は<a th:href="@{/user/signup}">こちら</a>
+ 	
     </div>
-    <div class="form-group">
-        <label for="sender">パスワード</label>
-        <br>
-        <input type="password" class="form-control" id="password" name="password" placeholder="パスワードを入力">
-    </div>
-
-    <button type="submit" class="btn btn-primary">ログイン</button>
-    </form>
-
 </form>
 
-
-
-<a th:href="@{/user/signup}">新規登録</a>
 </body >
 </html >
