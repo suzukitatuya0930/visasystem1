@@ -1,19 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<h1>mypage</h1>
-<form>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8" >
+    <title >MyPage</title > 
+ <style>
+  body {
+   background-color: lightslategrey;
+   font-family: Arial, sans-serif;
+  }
+  form {
+   background-color: lemonchiffon;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   width: 300px;
+   margin: 0 auto;
+  }
+  label, input {
+   display: block;
+   margin-bottom: 10px;
+  }
+  input[type="email"], input[type="password"] {
+   padding: 10px;
+   border-radius: 5px;
+   background-color: #f2f2f2;
+   width: 100%;
+   box-sizing: border-box;
+   font-size: 16px;
+  }
+  button[type="submit"]{
+   background-color: red;
+   color: white;
+   border-radius: 5px;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+  }
+ </style>
+</head >
 
 
+<body >
 
-
-
-
+ <h1><center>マイページへようこそ</center></h1>
+</div>
+<form th:action="@{/user/mypage}"method="POST">
+   <table>
+        <tr>
+            <th>氏名</th>
+            <th>ビザ期限</th> 
+       <th>ビザ種類</th>
+            <th>残り日数</th>
+ </tr>
+        <tr th:each="a : ${a}">
+            <td><span th:text="${a.name}"></span></td> 
+            <td><span th:text="${a.visaexpiry}"></span></td>
+            <td><span th:text="${a.visatypes}"></span></td>
+            <td><span th:text="${a.expiringdate}"></span></td>
+            
+        </tr>
+    </table>
 </form>
-
-</body>
-</html>
+<div class="btn-box">
+    <form th:action="@{/home}" method="POST">
+        
+            <button type="submit" class="btn" > 
+                ホームページ戻す
+               </button>
+    </form>
+        
+    </div>
+</form>
+</body >
+</html >

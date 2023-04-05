@@ -9,5 +9,9 @@
          SELECT COUNT(email) FROM  visasystem where email=#{email} and password=#{password}
           </select>
           
+          <select id="data" parameterType="com.example.demo.model.LoginUserModel"  resultType="String" >
+         SELECT name,email,visa,visatype  FROM  visasystem where email=#{email} and password=#{password}
+          </select>
+         
           </mapper> 
          

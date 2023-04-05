@@ -44,11 +44,11 @@
 
 
  <h1><center>ログイン画面</center></h1>
- <h1 th:text="${name}"></h1>
+
 
 <form th:action="@{/user/login}"method="POST">
- <div th:if="${msg}">
-  <h1 id="notify" th:text="${msg}"></h1>
+	<h2 th:text="${name}"></h2>
+  <h2 id="notify" th:text="${error}"></h2>
 </div>
 	 <p>
         <label for="email">Email：</label>

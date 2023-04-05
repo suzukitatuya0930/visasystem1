@@ -101,3 +101,552 @@
 2023-04-05 11:07:57.386 DEBUG 18812 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.insert     : ==>  Preparing: INSERT INTO visasystem(name,password,email,visa,visatype) VALUES (?,?,?,?,?)
 2023-04-05 11:07:57.387 DEBUG 18812 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.insert     : ==> Parameters: q(String), q(String), q@q(String), 2023-04-28(String), 介護(String)
 2023-04-05 11:07:57.400 DEBUG 18812 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.insert     : <==    Updates: 1
+2023-04-05 11:17:18.685  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:17:18.881  INFO 18812 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:17:18.894  INFO 18812 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-05 11:17:18.899  WARN 18812 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+2023-04-05 11:17:18.909  INFO 18812 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 11:17:18.918  INFO 18812 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 11:17:19.022  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:17:19.022 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:17:19.022  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:17:19.405  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:17:19.406  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:17:19.407  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:17:19.434  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:17:19.434  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 408 ms
+2023-04-05 11:17:19.568  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:17:19.646  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:17:19.662  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:17:19.672  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.694 seconds (JVM running for 587.08)
+2023-04-05 11:17:19.676  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:17:21.683  INFO 18812 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 11:17:21.684  INFO 18812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-05 11:17:21.685  INFO 18812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-05 11:17:42.668  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:17:42.858  INFO 18812 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:17:42.860  INFO 18812 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-05 11:17:42.953  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:17:42.954 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:17:42.954  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:17:43.232  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:17:43.234  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:17:43.234  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:17:43.265  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:17:43.266  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 309 ms
+2023-04-05 11:17:43.387  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:17:43.459  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:17:43.478  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:17:43.495  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.578 seconds (JVM running for 610.903)
+2023-04-05 11:17:43.497  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:24:08.614  INFO 18812 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 11:24:08.616  INFO 18812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-05 11:24:08.618  INFO 18812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-05 11:24:16.239  INFO 18812 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-04-05 11:24:16.284  INFO 18812 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-04-05 11:24:16.285 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-05 11:24:16.285 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: a@a(String), a(String)
+2023-04-05 11:24:16.288 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-05 11:30:21.045 DEBUG 18812 --- [http-nio-8080-exec-8] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-05 11:30:21.046 DEBUG 18812 --- [http-nio-8080-exec-8] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: a@a(String), a(String)
+2023-04-05 11:30:21.051 DEBUG 18812 --- [http-nio-8080-exec-8] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-05 11:30:26.783 DEBUG 18812 --- [http-nio-8080-exec-1] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-05 11:30:26.784 DEBUG 18812 --- [http-nio-8080-exec-1] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: a@a(String), (String)
+2023-04-05 11:30:26.787 DEBUG 18812 --- [http-nio-8080-exec-1] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-05 11:30:28.150 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-05 11:30:28.151 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: (String), (String)
+2023-04-05 11:30:28.154 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-05 11:30:28.819 DEBUG 18812 --- [http-nio-8080-exec-3] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-05 11:30:28.820 DEBUG 18812 --- [http-nio-8080-exec-3] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: (String), (String)
+2023-04-05 11:30:28.830 DEBUG 18812 --- [http-nio-8080-exec-3] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-05 11:31:13.742 DEBUG 18812 --- [http-nio-8080-exec-7] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-05 11:31:13.742 DEBUG 18812 --- [http-nio-8080-exec-7] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: (String), (String)
+2023-04-05 11:31:13.747 DEBUG 18812 --- [http-nio-8080-exec-7] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-05 11:31:43.915 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.search     : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=?
+2023-04-05 11:31:43.916 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.search     : ==> Parameters: s@s(String)
+2023-04-05 11:31:43.920 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.search     : <==      Total: 1
+2023-04-05 11:31:43.921 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.search     : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=?
+2023-04-05 11:31:43.922 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.search     : ==> Parameters: s@s(String)
+2023-04-05 11:31:43.931 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.search     : <==      Total: 1
+2023-04-05 11:32:25.381 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.search     : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=?
+2023-04-05 11:32:25.382 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.search     : ==> Parameters: u@u(String)
+2023-04-05 11:32:25.391 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.search     : <==      Total: 1
+2023-04-05 11:32:25.392 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.insert     : ==>  Preparing: INSERT INTO visasystem(name,password,email,visa,visatype) VALUES (?,?,?,?,?)
+2023-04-05 11:32:25.393 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.insert     : ==> Parameters: u(String), u(String), u@u(String), 2023-05-04(String), 技術・人文知識・国際業務(String)
+2023-04-05 11:32:25.403 DEBUG 18812 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.insert     : <==    Updates: 1
+2023-04-05 11:33:44.174  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:33:44.372  INFO 18812 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:33:44.374  INFO 18812 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-05 11:33:44.377  WARN 18812 --- [Thread-11] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+2023-04-05 11:33:44.381  INFO 18812 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-04-05 11:33:44.386  INFO 18812 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-04-05 11:33:44.482  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:33:44.482 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:33:44.483  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:33:44.786  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:33:44.787  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:33:44.787  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:33:44.810  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:33:44.810  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 325 ms
+2023-04-05 11:33:44.929  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:33:44.986  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:33:44.998  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:33:45.003  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.559 seconds (JVM running for 1572.412)
+2023-04-05 11:33:45.006  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:35:56.388  INFO 18812 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 11:35:56.390  INFO 18812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-05 11:35:56.395  INFO 18812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-05 11:36:03.863  INFO 18812 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-04-05 11:36:03.910  INFO 18812 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-04-05 11:36:03.911 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-05 11:36:03.911 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: a@a(String), a(String)
+2023-04-05 11:36:03.914 DEBUG 18812 --- [http-nio-8080-exec-2] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-05 11:38:42.096  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:38:42.295  INFO 18812 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:38:42.296  INFO 18812 --- [Thread-15] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-05 11:38:42.301  WARN 18812 --- [Thread-15] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+2023-04-05 11:38:42.305  INFO 18812 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-04-05 11:38:42.311  INFO 18812 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-04-05 11:38:42.405  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:38:42.405 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:38:42.406  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:38:42.723  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:38:42.724  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:38:42.724  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:38:42.753  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:38:42.753  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 345 ms
+2023-04-05 11:38:42.796  WARN 18812 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserMapper' defined in file [C:\Users\鈴木達也\git\visa\target\classes\com\example\demo\mapper\NewUserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+2023-04-05 11:38:42.797  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:38:42.805  INFO 18812 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-05 11:38:42.853 ERROR 18812 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserMapper' defined in file [C:\Users\鈴木達也\git\visa\target\classes\com\example\demo\mapper\NewUserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.example.demo.VisasystemtestApplication.main(VisasystemtestApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.5.jar:2.7.5]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserMapper' defined in file [C:\Users\鈴木達也\git\visa\target\classes\com\example\demo\mapper\NewUserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329) ~[spring-context-5.3.23.jar:5.3.23]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserMapper' defined in file [C:\Users\鈴木達也\git\visa\target\classes\com\example\demo\mapper\NewUserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329) ~[spring-context-5.3.23.jar:5.3.23]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 66 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 80 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5522e179.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5522e179$$FastClassBySpringCGLIB$$9c75535c.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5522e179.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 81 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	... 94 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.example.demo.mapper.LoginUserMapper.count. please check file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml] and file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1037) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:993) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:791) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:113) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121) ~[mybatis-3.5.9.jar:3.5.9]
+	... 96 common frames omitted
+
+2023-04-05 11:40:51.371  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:40:51.372 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:40:51.373  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:40:51.645  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:40:51.646  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:40:51.647  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:40:51.666  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:40:51.666  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 289 ms
+2023-04-05 11:40:51.704  WARN 18812 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserMapper' defined in file [C:\Users\鈴木達也\git\visa\target\classes\com\example\demo\mapper\NewUserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+2023-04-05 11:40:51.705  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:40:51.712  INFO 18812 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-05 11:40:51.722 ERROR 18812 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserMapper' defined in file [C:\Users\鈴木達也\git\visa\target\classes\com\example\demo\mapper\NewUserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.example.demo.VisasystemtestApplication.main(VisasystemtestApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.5.jar:2.7.5]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserMapper' defined in file [C:\Users\鈴木達也\git\visa\target\classes\com\example\demo\mapper\NewUserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329) ~[spring-context-5.3.23.jar:5.3.23]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'newUserMapper' defined in file [C:\Users\鈴木達也\git\visa\target\classes\com\example\demo\mapper\NewUserMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329) ~[spring-context-5.3.23.jar:5.3.23]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 66 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 80 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5522e179.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5522e179$$FastClassBySpringCGLIB$$9c75535c.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5522e179.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 81 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\鈴木達也\git\visa\target\classes\mapper\LoginUserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	... 94 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:76) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121) ~[mybatis-3.5.9.jar:3.5.9]
+	... 96 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'kk.soft.co.jp.sys.model.LoginUserModel'.  Cause: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.5.9.jar:3.5.9]
+	... 100 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: kk.soft.co.jp.sys.model.LoginUserModel
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.5.9.jar:3.5.9]
+	... 102 common frames omitted
+
+2023-04-05 11:40:57.319  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:40:57.319 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:40:57.319  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:40:57.576  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:40:57.579  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:40:57.579  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:40:57.598  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:40:57.598  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 276 ms
+2023-04-05 11:40:57.691  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:40:57.739  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:40:57.750  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:40:57.758  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.472 seconds (JVM running for 2005.166)
+2023-04-05 11:40:57.761  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:41:09.437  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:41:09.628  INFO 18812 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:41:09.716  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:41:09.716 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:41:09.717  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:41:09.985  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:41:09.986  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:41:09.986  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:41:10.005  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:41:10.005  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 285 ms
+2023-04-05 11:41:10.098  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:41:10.154  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:41:10.166  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:41:10.181  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.494 seconds (JVM running for 2017.588)
+2023-04-05 11:41:10.182  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:41:59.728  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:41:59.932  INFO 18812 --- [Thread-29] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:42:00.029  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:42:00.029 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:42:00.029  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:42:00.324  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:42:00.325  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:42:00.326  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:42:00.350  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:42:00.350  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 318 ms
+2023-04-05 11:42:00.463  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:42:00.524  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:42:00.537  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:42:00.543  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.553 seconds (JVM running for 2067.951)
+2023-04-05 11:42:00.546  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:42:09.183  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:42:09.390  INFO 18812 --- [Thread-33] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:42:09.479  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:42:09.480 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:42:09.480  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:42:09.762  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:42:09.763  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:42:09.763  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:42:09.784  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:42:09.784  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 302 ms
+2023-04-05 11:42:09.890  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:42:09.941  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:42:09.952  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:42:09.962  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.513 seconds (JVM running for 2077.37)
+2023-04-05 11:42:09.963  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:42:51.386  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:42:51.621  INFO 18812 --- [Thread-37] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:42:51.714  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:42:51.714 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:42:51.714  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:42:51.955  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:42:51.956  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:42:51.957  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:42:51.975  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:42:51.975  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 259 ms
+2023-04-05 11:42:52.073  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:42:52.122  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:42:52.134  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:42:52.146  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.461 seconds (JVM running for 2119.553)
+2023-04-05 11:42:52.148  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:53:22.288  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:53:22.510  INFO 18812 --- [Thread-41] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:53:22.606  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:53:22.606 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:53:22.607  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:53:22.866  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:53:22.867  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:53:22.867  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:53:22.885  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:53:22.885  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 276 ms
+2023-04-05 11:53:22.983  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:53:23.040  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:53:23.057  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:53:23.066  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.493 seconds (JVM running for 2750.475)
+2023-04-05 11:53:23.068  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:53:30.667  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:53:31.189  INFO 18812 --- [Thread-45] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:53:31.311  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:53:31.312 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:53:31.312  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:53:31.663  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:53:31.664  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:53:31.665  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:53:31.691  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:53:31.691  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 374 ms
+2023-04-05 11:53:31.793  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:53:31.882  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:53:31.899  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:53:31.911  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.64 seconds (JVM running for 2759.319)
+2023-04-05 11:53:31.913  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-05 11:53:33.353  INFO 18812 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-05 11:53:33.561  INFO 18812 --- [Thread-49] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 11:53:33.658  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 18812 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-05 11:53:33.658 DEBUG 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-05 11:53:33.658  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 11:53:33.940  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 11:53:33.941  INFO 18812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 11:53:33.941  INFO 18812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 11:53:33.963  INFO 18812 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-05 11:53:33.963  INFO 18812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 303 ms
+2023-04-05 11:53:34.071  INFO 18812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-05 11:53:34.121  INFO 18812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-05 11:53:34.135  INFO 18812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 11:53:34.143  INFO 18812 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 0.517 seconds (JVM running for 2761.55)
+2023-04-05 11:53:34.144  INFO 18812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

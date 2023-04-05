@@ -46,7 +46,7 @@ public class MainController {
 		 }else {
 			  
 			 newUserService.search(newUserModel);
-			model.addAttribute("id","別のログインIDを入力してください");
+			model.addAttribute("id","既にメールアドレスが登録されています。");
 			  return "signup";
 			
 		 }
@@ -67,6 +67,7 @@ public class MainController {
 			  return "index";
 			  
 		 }else {
+			// String name = loginUserService.data(loginUserModel);
 			 
 			 return "mypage";//マイページ
 		
