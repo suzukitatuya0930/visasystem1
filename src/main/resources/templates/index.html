@@ -42,8 +42,9 @@
 
 <body >
 
+
  <h1><center>ログイン画面</center></h1>
-</div>
+ <h1 th:text="${name}"></h1>
 
 <form th:action="@{/user/login}"method="POST">
  <div th:if="${msg}">

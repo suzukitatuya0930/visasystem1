@@ -55,16 +55,16 @@ public class MainController {
 	
 	
 	@Resource
-	private LoginUserService loginUserServie;
+	private LoginUserService loginUserService;
 	@PostMapping("/login")
 	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model) {
 		 //idとパスワードが合っているか判断
 		//間違ってた場合login画面へ合っていたら,マイページへ
-		  int count =  (int)loginUserServie.count(loginUserModel);
+		  int count =  (int)loginUserService.count(loginUserModel);
 		  if(count  == 0 ) {
 			  model.addAttribute("error","エラー");
 			  
-			  return "indexs";
+			  return "index";
 			  
 		 }else {
 			 
