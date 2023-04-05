@@ -70,10 +70,15 @@ public class MainController {
 //			  return "index";
 		
 		 if(loginUserModel.getEmail().equals("admin@admin"))
+		 
 		 {
+			 
+			 
 			 return "home";
+			 
 			  
 		 }else {
+			 
 			 
 			 List<LoginUserModel> data = loginUserService.getUser();
 				model.addAttribute("data",data);
