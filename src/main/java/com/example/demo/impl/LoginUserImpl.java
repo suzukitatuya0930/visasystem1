@@ -1,5 +1,7 @@
 package com.example.demo.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -18,6 +20,11 @@ public class LoginUserImpl implements LoginUserService {
 	public int count(LoginUserModel loginUser) {
 		
 		return mapper.count(loginUser);
+	}
+	
+	
+	public List<LoginUserModel>getUser() {
+		return mapper.getUser();
 	}
 
 }

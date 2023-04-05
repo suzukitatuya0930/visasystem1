@@ -1,7 +1,10 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -54,32 +57,40 @@ public class MainController {
 	
 	
 	
-	@Resource
+	@Autowired
 	private LoginUserService loginUserService;
 	@PostMapping("/login")
 	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model) {
 		 //idとパスワードが合っているか判断
 		//間違ってた場合login画面へ合っていたら,マイページへ
-		  int count =  (int)loginUserService.count(loginUserModel);
-		  if(count  == 0 ) {
-			  model.addAttribute("error","エラー");
-			  
-			  return "index";
+//		  int count =  (int)loginUserService.count(loginUserModel);
+//		  if(count  == 0 ) {
+//			  model.addAttribute("error","エラー");
+//			  
+//			  return "index";
+		
+		 if(loginUserModel.getEmail().equals("admin@admin"))
+		 {
+			 return "home";
 			  
 		 }else {
-			// String name = loginUserService.data(loginUserModel);
 			 
-			 return "mypage";//マイページ
-		
+			 List<LoginUserModel> data = loginUserService.getUser();
+				model.addAttribute("data",data);
+			
+			 return "mypage";
 	}
-	
-	
+		 
+		
+		    }
+		 		  
 		  
+			  
+		  }	
 		  
-}
-}
+	
 
 
-  
+	
 
 
