@@ -10,10 +10,8 @@
           </select>
           
           <select id="getUser" parameterType="com.example.demo.model.LoginUserModel"  resultType="String" >
-         SELECT name,email,visa,visatype  FROM  visasystem where email=#{email} and password=#{password}
+         SELECT name,email,visa,visatype  FROM  visasystem where email=#{email} 
           </select>
-          
-          
           
           <select id="admin" parameterType="com.example.demo.model.LoginUserModel"  resultType="String" >
          SELECT *  FROM  visasystem where name=#{admin} 

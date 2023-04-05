@@ -63,13 +63,14 @@ public class MainController {
 	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model) {
 		 //idとパスワードが合っているか判断
 		//間違ってた場合login画面へ合っていたら,マイページへ
-//		  int count =  (int)loginUserService.count(loginUserModel);
-//		  if(count  == 0 ) {
-//			  model.addAttribute("error","エラー");
-//			  
-//			  return "index";
+		  int count =  (int)loginUserService.count(loginUserModel);
+		  if(count  == 0 ) {
+			  model.addAttribute("error","エラー");
+			  
+			  return "index";
+		  }
 		
-		 if(loginUserModel.getEmail().equals("admin@admin"))
+		  else if(loginUserModel.getEmail().equals("admin@admin"))
 		 
 		 {
 			 
@@ -79,7 +80,7 @@ public class MainController {
 			  
 		 }else {
 			 
-			 
+//			 
 			 List<LoginUserModel> data = loginUserService.getUser();
 				model.addAttribute("data",data);
 			
