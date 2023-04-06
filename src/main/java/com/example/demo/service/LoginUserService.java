@@ -8,6 +8,8 @@ public interface LoginUserService {
 	public int count(LoginUserModel loginUser);
 
 	 List<LoginUserModel> getUser();
+
+	public List<LoginUserModel> user(LoginUserModel loginUserModel);
 	
 	
 	

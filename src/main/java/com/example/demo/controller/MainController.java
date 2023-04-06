@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -77,23 +78,35 @@ public class MainController {
 			 
 			 return "home";
 			 
-			  
-		 }else {
+		}else {
 			 
-//			 
-			 List<LoginUserModel> data = loginUserService.getUser();
-				model.addAttribute("data",data);
+		 
 			
+			List<LoginUserModel> listuser=loginUserService.user(loginUserModel);
+		       System.out.println(listuser);
+		       model.addAttribute("listuser",listuser);
 			 return "mypage";
 	}
 		 
 		
 		    }
+	
+	  @GetMapping("/mypage")
+      public String user(Model model,LoginUserModel loginUserModel) {
+       List<LoginUserModel> listuser=loginUserService.user(loginUserModel);
+       System.out.println(listuser);
+       model.addAttribute("listuser",listuser);
+          return "mypage";
+      }
 		 		  
 		  
 			  
-		  }	
+
+
+
 		  
+
+}
 	
 
 

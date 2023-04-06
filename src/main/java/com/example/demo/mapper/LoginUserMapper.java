@@ -16,4 +16,6 @@ public interface LoginUserMapper {
 	
 	List<LoginUserModel>getUser();
 
+	List<LoginUserModel> user(LoginUserModel loginUserModel);
+
 }

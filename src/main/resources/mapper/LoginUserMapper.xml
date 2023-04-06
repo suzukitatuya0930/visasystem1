@@ -9,9 +9,18 @@
          SELECT COUNT(email) FROM  visasystem where email=#{email} and password=#{password}
           </select>
           
-          <select id="getUser" parameterType="com.example.demo.model.LoginUserModel"  resultType="String" >
-         SELECT name,email,visa,visatype  FROM  visasystem where email=#{email} 
+        
+          
+           <select id="a" parameterType="com.example.demo.model.LoginUserModel"  resultType="String" >
+         SELECT *  FROM  visasystem where email=#{email} and password=#{password} 
           </select>
+          
+          <select id="user" parameterType="com.example.demo.model.LoginUserModel"  resultType="com.example.demo.model.LoginUserModel" >
+         SELECT  name,visa,visatype FROM  visasystem where email=#{email} and password=#{password} 
+          </select>
+          
+          
+          
           
           <select id="admin" parameterType="com.example.demo.model.LoginUserModel"  resultType="String" >
          SELECT *  FROM  visasystem where name=#{admin} 

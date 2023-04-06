@@ -27,4 +27,11 @@ public class LoginUserImpl implements LoginUserService {
 		return mapper.getUser();
 	}
 
+
+	@Override
+	public List<LoginUserModel> user(LoginUserModel loginUserModel) {
+		// TODO 自動生成されたメソッド・スタブ
+		return mapper.user(loginUserModel);
+	}
+
 }

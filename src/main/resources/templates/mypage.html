@@ -50,13 +50,13 @@
             <th>氏名</th>
             <th>ビザ期限</th> 
        		<th>ビザ種類</th>
-            <th>残り日数</th>
+           <!-- <th>残り日数</th>-->
  </tr>
-        	<tr th:each="user: ${data}">
-            <td><span th:text="${user.name}"></span></td> 
-            <td><span th:text="${user.visaexpiry}"></span></td>
-            <td><span th:text="${user.visatypes}"></span></td>
-            <td><span th:text="${user.expiringdate}"></span></td>
+        	<tr th:each="listuser: ${listuser}">
+            <td><span th:text="${listuser.name}"></span></td> 
+            <td><span th:text="${listuser.visa}"></span></td>
+            <td><span th:text="${listuser.visatype}"></span></td>
+         <!--  <td><span th:text="${listuser.expiringdate}"></span></td>-->
             
         </tr>
     </table>

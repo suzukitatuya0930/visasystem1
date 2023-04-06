@@ -1,5 +1,7 @@
 package com.example.demo.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -23,5 +25,12 @@ public class NewUserImpl implements NewUserService {
 
         return mapper.search(newUser);
     }
+
+
+	@Override
+	public List<NewUserModel> user(NewUserModel newUserModel) {
+		// TODO 自動生成されたメソッド・スタブ
+		return mapper.user(newUserModel);
+	}
 	
 }
