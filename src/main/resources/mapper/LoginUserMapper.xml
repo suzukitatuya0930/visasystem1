@@ -15,6 +15,7 @@
          SELECT *  FROM  visasystem where email=#{email} and password=#{password} 
           </select>
           
+          
           <select id="user" parameterType="com.example.demo.model.LoginUserModel"  resultType="com.example.demo.model.LoginUserModel" >
          SELECT  name,visa,visatype FROM  visasystem where email=#{email} and password=#{password} 
           </select>

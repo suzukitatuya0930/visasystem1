@@ -38,11 +38,12 @@ h1{
 </style>
 <div id="a">
  <h1>ビザのリスト</h1>
- <form th:action="@{/user/entry}"method="POST">
+ 
+
 <table class="center">
  <thead>
             <tr>
-    <th>ID</th>
+    			<th>ID</th>
                 <th>名前</th>
                 <th>ビザ期限</th>
                 <th>ビザ種類</th>
@@ -51,15 +52,16 @@ h1{
               
             </tr>
         </thead>
+        
         <tbody>
-            <tr th:each="listuser : ${listuser}">
-    <td th:text="${listuser.id}"></td>
+           		<tr th:each="listuser : ${listuser}">
+    			<td th:text="${listuser.id}"></td>
                 <td th:text="${listuser.name}"></td>
                 <td th:text="${listuser.visa}"></td>
                 <td th:text="${listuser.visatype}"></td>
-                 <td><span th:text="${daysBetween}"></span></td>	
-                <td>
-     <a class="b" th:href="@{delete/{id}(id=${listuser.id})}">削除</a>
+                <td th:text="${listuser.getRemaining()}"></td>
+                
+     		<a class="b" th:href="@{delete/{id}(id=${listuser.id})}">削除</a>
            <a class="c" th:href="@{update/{id}(id=${listuser.id})}">編集</a>
     </td>
             </tr>

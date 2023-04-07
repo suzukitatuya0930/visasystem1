@@ -18,6 +18,8 @@
        SELECT id, name, visa, visatype FROM visasystem WHERE email != 'admin';
 
     </select>
+    
+    
 
     <delete id="delete" parameterType="com.example.demo.model.NewUserModel">
      delete from visasystem where id=#{id}

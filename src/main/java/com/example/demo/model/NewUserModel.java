@@ -13,6 +13,10 @@ public class NewUserModel implements Serializable {
 	private String email;
 	private String visa;
 	private String visatype;
+	private String remaining;
+	
+	
+	
 	
 	
 	

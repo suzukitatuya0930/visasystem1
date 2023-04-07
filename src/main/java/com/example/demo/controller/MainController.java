@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -105,7 +106,7 @@ public class MainController {
 
 			    // 結果をHTMLに表示する
 			    model.addAttribute("daysBetween", daysBetween);
-		      
+			    
 			 return "mypage";
 			 
 	}
@@ -135,28 +136,30 @@ public class MainController {
 	
 	
 
-	
 	@GetMapping("/home")
     public String home(Model model,NewUserModel newUserModel) {
      List<NewUserModel> listuser=newUserService.checkall(newUserModel);
      
      model.addAttribute("listuser",listuser);
-     
-     
-     for(int i=0; i < listuser.size();i++) {
-    	LocalDate today = LocalDate.now();
-	    
-	    LocalDate dbDate = LocalDate.parse(listuser.get(i).getVisa());
-	    //
-	    // 日数の差分を計算する
-	    long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
-	    model.addAttribute("daysBetween", daysBetween);
-     
-     
+     List<Long> daysBetweenList = new ArrayList<>();
+
+     LocalDate today = LocalDate.now();
+
+     for (NewUserModel user : listuser) {
+         LocalDate dbDate = LocalDate.parse(user.getVisa());
+         long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+        // daysBetweenList.add(daysBetween);
+         user.setRemaining(String.valueOf(daysBetween));
+         System.out.println("Daysbetween today and"+ dbDate +"is"+ daysBetween);
      }
+
+     model.addAttribute("daysBetweenList", daysBetweenList);
+
         return "home";
      
     }
+	
+	
 
 	
 	@GetMapping("/delete/{id}")
