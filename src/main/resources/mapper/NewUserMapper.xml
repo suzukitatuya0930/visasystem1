@@ -24,6 +24,7 @@
     <delete id="delete" parameterType="com.example.demo.model.NewUserModel">
      delete from visasystem where id=#{id}
     </delete>
+    
      <select id="selectupdate"  resultType="com.example.demo.model.NewUserModel" parameterType="com.example.demo.model.NewUserModel">
     SELECT*FROM visasystem WHERE id=#{id}
     

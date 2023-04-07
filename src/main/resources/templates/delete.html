@@ -3,16 +3,11 @@
 <head charset="utf-8">
 <title>home</title>
 </head>
-<body>
+
  
 
 <style>
-body {
-			background-color: lightslategrey;
-			font-family: Arial, sans-serif;
-		}
 table, th, td {
-	background :lemonchiffon;
   border: 1px solid black;
   text-align: center;
   
@@ -34,8 +29,12 @@ table.center {
 }
 h1{
  text-align: center;
+}
+#b{
+ text-align: center;
+ margin-bottom: 30%;
+ margin-top: 5%;
  }
- 
  a{
     text-decoration: none;
   width: 100px;
@@ -50,39 +49,41 @@ h1{
 </style>
 <div id="a">
  <h1>ビザのリスト</h1>
+ <span th:if="${kakunin}">
+  <h2 th:text"${kakunin}"></h2>
+ </span>
  
-
+ <form th:action="@{{id}(id=${listuser.id})}"th:each="listuser : ${listuser}" method="POST">
+  
 <table class="center">
  <thead>
             <tr>
-    			<th>ID</th>
+    <th>ID</th>
                 <th>名前</th>
                 <th>ビザ期限</th>
                 <th>ビザ種類</th>
                 <th>残日数</th>
-                <th>削除/編集</th>
               
             </tr>
         </thead>
-        
         <tbody>
-           		<tr th:each="listuser : ${listuser}">
-    			<td th:text="${listuser.id}"></td>
+            <tr th:each="listuser : ${listuser}">
+    <td th:text="${listuser.id}"></td>
                 <td th:text="${listuser.name}"></td>
                 <td th:text="${listuser.visa}"></td>
                 <td th:text="${listuser.visatype}"></td>
-                <td th:text="${listuser.getRemaining()}"></td>
-                <td>
-     		<a class="b" th:href="@{delete/{id}(id=${listuser.id})}">削除</a>
-           <a class="c" th:href="@{update/{id}(id=${listuser.id})}">編集</a>
-    </td>
+                 <td >keisan</td>
             </tr>
-         <tbody>
-         
+        </tbody>
+        </div>
         </table>
-</div>
+        <div id="b">
+        <a th:href="@{/user/home}">キャンセル</a>
+        <button type="submit">削除</button>
+        </div>
+        
 
-
+</form>
 
 </body>
 </html>

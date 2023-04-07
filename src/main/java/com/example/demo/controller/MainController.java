@@ -152,7 +152,6 @@ public class MainController {
          user.setRemaining(String.valueOf(daysBetween));
          System.out.println("Daysbetween today and"+ dbDate +"is"+ daysBetween);
      }
-
      model.addAttribute("daysBetweenList", daysBetweenList);
 
         return "home";
@@ -161,13 +160,22 @@ public class MainController {
 	
 	
 
-	
 	@GetMapping("/delete/{id}")
-	public String getdelete(@PathVariable("id") int id, NewUserModel newUserModel) {
-		System.out.println(id);
-     newUserService.delete(newUserModel);
-     return "redirect:/user/home";
-  }
+	   public String getdelete(@PathVariable("id") int id,Model model, NewUserModel newUserModel) {
+	    List<NewUserModel> listuser=newUserService.selectupdate(newUserModel);
+	     model.addAttribute("listuser",listuser);
+
+	  return "delete";
+	    }
+	 @PostMapping("/delete/{id}")
+	   public String delete(@PathVariable("id") int id, NewUserModel newUserModel) {
+	  List<NewUserModel> listuser=newUserService.selectupdate(newUserModel);
+	  System.out.println(listuser);
+	  newUserService.delete(newUserModel);
+	  
+	  return "redirect:/user/home";
+	 
+	 }
   
 	@GetMapping("/update/{id}")
 	public String getupdateid(@PathVariable("id")  int id,Model model,NewUserModel newUserModel) {
@@ -181,6 +189,8 @@ public class MainController {
 		newUserService.update(newUserModel);
 		System.out.println(newUserService.update(newUserModel));
 		return "redirect:/user/home";
+		
+		
  }
 
 	
