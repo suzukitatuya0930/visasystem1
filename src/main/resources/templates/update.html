@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8" >
+    <title >Update</title >	
+ <style>
+		body {
+			background-color: lightslategrey;
+			font-family: Arial, sans-serif;
+		}
+		form {
+			background-color: lemonchiffon;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 300px;
+			margin: 0 auto;
+		}
+		label, input {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="input"],input[type="email"],input[type="date"]{
+			padding: 10px;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+		button[type="submit"] {
+			background-color: red;
+			color: white;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		select {
+			padding: 10px;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+
+			option {
+  			padding: 5px;
+  			margin: 5px;
+		}
+
+
+	</style>
+</head >
+
+
+<body >
+
+ <h1><center>ユーザー情報更新画面</center></h1>
+</div>
+<form th:action="@{/user/userupdate}"method="POST">
+ <div th:if="${msg}">
+  <h1 id="notify" th:text="${msg}"></h1>
+</div>
+	 <p>
+        <label for="name">Name：</label>
+        <input type="input" class="form-control" id="name" name="name" placeholder="名前を入力してください">
+	  <!--<label for="email">Email：</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレスを入力してください"> -->
+        <label for="expirydate">ビザ期限：</label>
+        <input type="date" class="form-control" id="expirydate" name="expirydate" placeholder="新しい期限を入力してください">
+    </p>
+
+	<p><label for="visatypes">ビザ種類</label>
+
+		<select>
+<option value="option">選択してください</option>
+  <option value="Student">留学</option>
+  <option value="Engineer">技術・人文知識・国際業務</option>
+  <option value="LongTermResident">永住者</option>
+  <option value="WorkPermit">特定活動</option>
+  <option value="CareTaker">介護</option>
+  <option value="Cook">技能</option>
+  <option value="Training">研修</option>
+  <option value="Teacher">教育</option>
+  <option value="Lawyer">法律・弁護士</option>
+</select></p>
+  <button type="submit">更新</button>
+
+
+	
+
+</a>  
+        
+    </div>
+</form>
+</body >
+</html >

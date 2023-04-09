@@ -37,6 +37,7 @@
    cursor: pointer;
   }
  </style>
+  <script src="/js/daysLeft.js"></script>
 </head >
 
 
@@ -50,24 +51,27 @@
             <th>氏名</th>
             <th>ビザ期限</th> 
        		<th>ビザ種類</th>
-           <!-- <th>残り日数</th>-->
+           <th>残り日数</th>
  </tr>
         	<tr th:each="listuser: ${listuser}">
             <td><span th:text="${listuser.name}"></span></td> 
-            <td><span th:text="${listuser.visa}"></span></td>
+            <td><span th:text="${listuser.visa}"  id="expirationDate"></span></td>
             <td><span th:text="${listuser.visatype}"></span></td>
-         <!--  <td><span th:text="${listuser.expiringdate}"></span></td>-->
+            <td><span th:text="${daysBetween}"></span></td>		
             
         </tr>
     </table>
 </form>
+
 <div class="btn-box">
     <form th:action="@{/home}" method="POST">
         
             <button type="submit" class="btn" > 
                 ホームページ戻す
                </button>
+              更新は<a th:href="@{/user/update}">こちら</a>
     </form>
+   
         
     </div>
 </form>
