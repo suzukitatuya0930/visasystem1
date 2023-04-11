@@ -1,88 +1,107 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head charset="utf-8">
-<title>home</title>
-</head>
-<body>
- 
 
-<style>
-body {
+<head charset="utf-8">
+	<title>home</title>
+</head>
+
+<body>
+
+
+	<style>
+		body {
 			background-color: lightslategrey;
 			font-family: Arial, sans-serif;
 		}
-table, th, td {
-	background :lemonchiffon;
-  border: 1px solid black;
-  text-align: center;
-  
-}
 
-th, td {
-  padding: 10px;
-}
-table.center {
-  margin-left: auto; 
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-#a{
-   margin-left: auto; 
-  margin-right: auto;
- 
-}
-h1{
- text-align: center;
- }
- 
- a{
-    text-decoration: none;
-  width: 100px;
-  height: 50px;
-  border: 1px black solid;
-  font-size: 15px;
-  color: black;
-  background-color: rgb(192, 192, 192);
-  margin-left: auto;
-  
-  }
-</style>
-<div id="a">
- <h1>ビザのリスト</h1>
- 
+		table,
+		th,
+		td {
+			background: lemonchiffon;
+			border: 1px solid black;
+			text-align: center;
 
-<table class="center">
- <thead>
-            <tr>
-    			<th>ID</th>
-                <th>名前</th>
-                <th>ビザ期限</th>
-                <th>ビザ種類</th>
-                <th>残日数</th>
-                <th>削除/編集</th>
-              
-            </tr>
-        </thead>
-        
-        <tbody>
-           		<tr th:each="listuser : ${listuser}">
-    			<td th:text="${listuser.id}"></td>
-                <td th:text="${listuser.name}"></td>
-                <td th:text="${listuser.visa}"></td>
-                <td th:text="${listuser.visatype}"></td>
-                <td th:text="${listuser.getRemaining()}"></td>
-                <td>
-     		<a class="b" th:href="@{delete/{id}(id=${listuser.id})}">削除</a>
-           <a class="c" th:href="@{update/{id}(id=${listuser.id})}">編集</a>
-    </td>
-            </tr>
-         <tbody>
-         
-        </table>
-</div>
+		}
+
+		th,
+		td {
+			padding: 10px;
+		}
+
+		table.center {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		#a {
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		a {
+			text-decoration: none;
+			width: 100px;
+			height: 50px;
+			border: 1px black solid;
+			font-size: 15px;
+			color: black;
+			background-color: rgb(192, 192, 192);
+			margin-left: auto;
+
+		}
+	</style>
+	<div id="a">
+		<h1>ビザのリスト</h1>
 
 
+		<table class="center">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>名前</th>
+					<th>ビザ期限</th>
+					<th>ビザ種類</th>
+					<th>残日数</th>
+					<th>削除/編集</th>
 
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="listuser : ${listuser}">
+					<td th:text="${listuser.id}"></td>
+					<td th:text="${listuser.name}"></td>
+					<td th:text="${listuser.visa}"></td>
+					<td th:text="${listuser.visatype}"></td>
+					<td th:text="${listuser.getRemaining()}"></td>
+					<td>
+						<a class="b" th:href="@{delete/{id}(id=${listuser.id})}">削除</a>
+						<a class="c" th:href="@{update/{id}(id=${listuser.id})}">編集</a>
+					</td>
+				</tr>
+			<tbody>
+				<tr class="logoutbtn">
+					<div>
+						<td style="border: 1px solid lemonchiffon;"></td>
+						<td style="border: 1px solid lemonchiffon;"></td>
+						<td style="border: 1px solid lemonchiffon;"></td>
+						<td style="border: 1px solid lemonchiffon;"></td>
+						<td style="border: 1px solid lemonchiffon;"></td>
+						<td style="border: 1px solid #FAFAD2;">
+							<form th:action="@{/user/index}" method="get">
+								<button type="submit" class="btn">ログアウト</button>
+							</form>
+						</td>
+				</tr>
+		</table>
+	</div>
 </body>
+
 </html>

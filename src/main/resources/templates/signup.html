@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
-<head >
-    <meta charset="UTF-8" >
-    <title >SignUp Page</title >
-     <style>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>SignUp Page</title>
+	<style>
 		body {
 			background-color: lightslategray;
 			font-family: arial, sans-serif;
 		}
+
 		form {
 			background-color: lemonchiffon;
 			padding: 20px;
@@ -16,12 +18,17 @@
 			width: 300px;
 			margin: 0 auto;
 		}
-		label, input {
+
+		label,
+		input {
 			display: block;
 			margin-bottom: 10px;
 		}
-		input[type="input"], input[type="password"],
-		input[type="email"],input[type="date"]{
+
+		input[type="input"],
+		input[type="password"],
+		input[type="email"],
+		input[type="date"] {
 			padding: 10px;
 			border-radius: 5px;
 			background-color: #f2f2f2;
@@ -29,7 +36,9 @@
 			box-sizing: border-box;
 			font-size: 16px;
 		}
-		button[type="submit"], button[type="reset"]{
+
+		button[type="submit"],
+		button[type="reset"] {
 			background-color: red;
 			color: white;
 			border-radius: 5px;
@@ -37,6 +46,7 @@
 			font-size: 16px;
 			cursor: pointer;
 		}
+
 		select {
 			padding: 10px;
 			border-radius: 5px;
@@ -46,47 +56,58 @@
 			font-size: 16px;
 		}
 
-			option {
-  			padding: 5px;
-  			margin: 5px;
+		option {
+			padding: 5px;
+			margin: 5px;
 		}
-
 	</style>
-</head >
-<body >
-  <h1><b><center>新規登録画面へようこそ</center></b></h1>
-<form th:action="@{/user/entry}"method="post">
-	<h2 th:text="${id}"></h2><!--エラー文-->
-        <label for="name">Name</label>
-        <input type="input" class="form-control" id="name" name="name" placeholder="名前を入力してください"></p>
-        <p>
-        <label for="password">Password：</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="パスワードを入力してください"></p>
-        <p>
-        <label for="email">Email：</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレスを入力してください"></p>
-        <p>
-        <label for="visa">ビザ期限：</label>
-        <input type="date" class="form-control" id="visa" name="visa" placeholder="お持ちのビザの期限を入力してください"></p>
-	<p><label for="visatype">ビザ種類</label>
+</head>
 
-		<select name="visatype">
-<option value="option">選択してください</option>
-  <option value="留学">留学</option>
-  <option value="技術・人文知識・国際業務">技術・人文知識・国際業務</option>
-  <option value="永住者">永住者</option>
-  <option value="特定活動">特定活動</option>
-  <option value="介護">介護</option>
-  <option value="技能">技能</option>
-  <option value="研修">研修</option>
-  <option value="教育">教育</option>
-  <option value="法律・弁護士">法律・弁護士</option>
-</select></p>
+<body>
+	<h1><b>
+			<center>新規登録画面へようこそ</center>
+		</b></h1>
+	<form th:action="@{/user/entry}" method="post">
+		<h2 th:text="${id}"></h2>
+		<!--エラー文-->
+		<label for="name">Name</label>
+		<input type="input" class="form-control" id="name" name="name" placeholder="名前を入力してください"></p>
+		<p>
+			<label for="password">Password：</label>
+			<input type="password" class="form-control" id="password" name="password" placeholder="パスワードを入力してください">
+		</p>
+		<p>
+			<label for="email">Email：</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="メールアドレスを入力してください">
+		</p>
+		<p>
+			<label for="visa">ビザ期限：</label>
+			<input type="date" class="form-control" id="visa" name="visa" placeholder="お持ちのビザの期限を入力してください">
+		</p>
+		<p><label for="visatype">ビザ種類</label>
 
-    <button type="submit">登録</button>
-     <button type="reset">キャンセル</button>
+			<select name="visatype">
+				<option value="option">選択してください</option>
+				<option value="留学">留学</option>
+				<option value="技術・人文知識・国際業務">技術・人文知識・国際業務</option>
+				<option value="永住者">永住者</option>
+				<option value="特定活動">特定活動</option>
+				<option value="介護">介護</option>
+				<option value="技能">技能</option>
+				<option value="研修">研修</option>
+				<option value="教育">教育</option>
+				<option value="法律・弁護士">法律・弁護士</option>
+			</select>
+		</p>
 
-    
-</form>
-</body >
-</html >
+		<button type="submit">登録</button>
+		<form th:action="@{/user/index}" method="get">
+			<button type="submit" class="button">キャンセル</button>
+		</form>
+
+
+
+	</form>
+</body>
+
+</html>

@@ -24,185 +24,161 @@ import com.example.demo.service.NewUserService;
 
 import lombok.extern.slf4j.Slf4j;
 
-
-
 @Controller
 @RequestMapping("/user")
 @Slf4j
 
 public class MainController {
-	
-	
+
 	//ログイン画面から新規登録
 	//index.htmlで<a th:href="@{/user/signup}">で指定している
 	@GetMapping("/signup")
-    public String signup() {
-        return "signup";
-        }
-	
-//	
+	public String signup() {
+		return "signup";
+	}
+
+	//	
 	@Resource
-    private NewUserService newUserService;
-	
+	private NewUserService newUserService;
+
 	//新規登録画面
 	@PostMapping("/entry")
-	public String entry(@ModelAttribute NewUserModel newUserModel,Model model){
+	public String entry(@ModelAttribute NewUserModel newUserModel, Model model) {
 		//既に登録されているメールアドレスか判断 
-		int count =  newUserService.search(newUserModel);
-		  if(count  == 0){
-			 newUserService.insert(newUserModel);
-	       model.addAttribute("name","登録完了");
-	       																																																																																																																																																																															
-	       return "index";
-			
-		 }else {
-			  
-			 
-			 newUserService.search(newUserModel);
-			model.addAttribute("id","既にメールアドレスが登録されています。");
-			  return "signup";
-			
-		 }
-		  }
-	
-	
-	
+		int count = newUserService.search(newUserModel);
+		if (count == 0) {
+			newUserService.insert(newUserModel);
+			model.addAttribute("name", "登録完了");
+
+			return "index";
+
+		} else {
+
+			newUserService.search(newUserModel);
+			model.addAttribute("id", "既にメールアドレスが登録されています。");
+			return "signup";
+
+		}
+
+	}
+
 	@Autowired
 	private LoginUserService loginUserService;
-	
+
+	@GetMapping("/index")
+	public String index() {
+		return "index";
+	}
+
 	@PostMapping("/login")
 	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model) {
-		 //idとパスワードが合っているか判断
+		//idとパスワードが合っているか判断
 		//間違ってた場合login画面へ合っていたら,マイページへ
-		  int count =  (int)loginUserService.count(loginUserModel);
-		  if(count  == 0 ) {
-			  model.addAttribute("error","エラー");
-			  
-			  return "index";
-		  }
-		
-		  else if(loginUserModel.getEmail().equals("admin@admin"))
-		 
-		 {
-			 
-			 
-			 return "home";
-			 
-		}else {
-			 
-		 
-			
-			List<LoginUserModel> listuser=loginUserService.user(loginUserModel);
-		       System.out.println(listuser);
-		       model.addAttribute("listuser",listuser);
-		       
-//			    // 今日の日付を取得する
-			    LocalDate today = LocalDate.now();
-			    
-			    LocalDate dbDate = LocalDate.parse(listuser.get(0).getVisa());
-			    //
-			    // 日数の差分を計算する
-			    long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+		int count = (int) loginUserService.count(loginUserModel);
+		if (count == 0) {
+			model.addAttribute("error", "エラー");
 
-			    // 結果をHTMLに表示する
-			    model.addAttribute("daysBetween", daysBetween);
-			    
-			 return "mypage";
-			 
+			return "index";
+		}
+
+		else if (loginUserModel.getEmail().equals("admin@admin"))
+
+		{
+
+			return "home";
+
+		} else {
+
+			List<LoginUserModel> listuser = loginUserService.user(loginUserModel);
+			System.out.println(listuser);
+			model.addAttribute("listuser", listuser);
+
+			//			    // 今日の日付を取得する
+			LocalDate today = LocalDate.now();
+
+			LocalDate dbDate = LocalDate.parse(listuser.get(0).getVisa());
+			//
+			// 日数の差分を計算する
+			long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+
+			// 結果をHTMLに表示する
+			model.addAttribute("daysBetween", daysBetween);
+
+			return "mypage";
+
+		}
+
 	}
-		 
-		
-		    }
-	
-//  @GetMapping("/login")
-//      public String user(Model model,LoginUserModel loginUserModel) {
-//	  LocalDate dbDate = LocalDate.parse(loginUserModel.getVisa());
-//
-//	    // 今日の日付を取得する
-//	    LocalDate today = LocalDate.now();
-//
-//	    // 日数の差分を計算する
-//	    long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
-//
-//	    // 結果をHTMLに表示する
-//	    model.addAttribute("daysBetween", daysBetween);
-//          return "mypage";
-//      }
-//		 		  
-		  
-	
-	
-	
-	
-	
+
+	//  @GetMapping("/login")
+	//      public String user(Model model,LoginUserModel loginUserModel) {
+	//	  LocalDate dbDate = LocalDate.parse(loginUserModel.getVisa());
+	//
+	//	    // 今日の日付を取得する
+	//	    LocalDate today = LocalDate.now();
+	//
+	//	    // 日数の差分を計算する
+	//	    long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+	//
+	//	    // 結果をHTMLに表示する
+	//	    model.addAttribute("daysBetween", daysBetween);
+	//          return "mypage";
+	//      }
+	//		 		  
 
 	@GetMapping("/home")
-    public String home(Model model,NewUserModel newUserModel) {
-     List<NewUserModel> listuser=newUserService.checkall(newUserModel);
-     
-     model.addAttribute("listuser",listuser);
-     List<Long> daysBetweenList = new ArrayList<>();
+	public String home(Model model, NewUserModel newUserModel) {
+		List<NewUserModel> listuser = newUserService.checkall(newUserModel);
 
-     LocalDate today = LocalDate.now();
+		model.addAttribute("listuser", listuser);
+		List<Long> daysBetweenList = new ArrayList<>();
 
-     for (NewUserModel user : listuser) {
-         LocalDate dbDate = LocalDate.parse(user.getVisa());
-         long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
-        // daysBetweenList.add(daysBetween);
-         user.setRemaining(String.valueOf(daysBetween));
-         System.out.println("Daysbetween today and"+ dbDate +"is"+ daysBetween);
-     }
-     model.addAttribute("daysBetweenList", daysBetweenList);
+		LocalDate today = LocalDate.now();
 
-        return "home";
-     
-    }
-	
-	
+		for (NewUserModel user : listuser) {
+			LocalDate dbDate = LocalDate.parse(user.getVisa());
+			long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+			// daysBetweenList.add(daysBetween);
+			user.setRemaining(String.valueOf(daysBetween));
+			System.out.println("Daysbetween today and" + dbDate + "is" + daysBetween);
+		}
+		model.addAttribute("daysBetweenList", daysBetweenList);
+
+		return "home";
+
+	}
 
 	@GetMapping("/delete/{id}")
-	   public String getdelete(@PathVariable("id") int id,Model model, NewUserModel newUserModel) {
-	    List<NewUserModel> listuser=newUserService.selectupdate(newUserModel);
-	     model.addAttribute("listuser",listuser);
+	public String getdelete(@PathVariable("id") int id, Model model, NewUserModel newUserModel) {
+		List<NewUserModel> listuser = newUserService.selectupdate(newUserModel);
+		model.addAttribute("listuser", listuser);
 
-	  return "delete";
-	    }
-	 @PostMapping("/delete/{id}")
-	   public String delete(@PathVariable("id") int id, NewUserModel newUserModel) {
-	  List<NewUserModel> listuser=newUserService.selectupdate(newUserModel);
-	  System.out.println(listuser);
-	  newUserService.delete(newUserModel);
-	  
-	  return "redirect:/user/home";
-	 
-	 }
-  
+		return "delete";
+	}
+
+	@PostMapping("/delete/{id}")
+	public String delete(@PathVariable("id") int id, NewUserModel newUserModel) {
+		List<NewUserModel> listuser = newUserService.selectupdate(newUserModel);
+		System.out.println(listuser);
+		newUserService.delete(newUserModel);
+
+		return "redirect:/user/home";
+
+	}
+
 	@GetMapping("/update/{id}")
-	public String getupdateid(@PathVariable("id")  int id,Model model,NewUserModel newUserModel) {
-		List<NewUserModel> listuser=newUserService.selectupdate(newUserModel);
-		model.addAttribute("listuser",listuser);
+	public String getupdateid(@PathVariable("id") int id, Model model, NewUserModel newUserModel) {
+		List<NewUserModel> listuser = newUserService.selectupdate(newUserModel);
+		model.addAttribute("listuser", listuser);
 		return "update";
- }
-	
+	}
+
 	@PostMapping("/update/{id}")
-	public String update(NewUserModel newUserModel, Model model,BindingResult result){
+	public String update(NewUserModel newUserModel, Model model, BindingResult result) {
 		newUserService.update(newUserModel);
 		System.out.println(newUserService.update(newUserModel));
 		return "redirect:/user/home";
-		
-		
- }
 
-	
-}	
+	}
 
-
-
-
-
-	
-
-
-	
-
-
+}
