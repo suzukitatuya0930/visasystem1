@@ -26,11 +26,32 @@ public class NewUserImpl implements NewUserService {
         return mapper.search(newUser);
     }
 
+	
+	
 
 	@Override
 	public List<NewUserModel> user(NewUserModel newUserModel) {
 		// TODO 自動生成されたメソッド・スタブ
 		return mapper.user(newUserModel);
 	}
+	
+	public int delete(NewUserModel newUser) {
+		  
+		  return mapper.delete(newUser);
+		 }
+		 public int update(NewUserModel newUser) {
+		   
+		   return mapper.update(newUser);
+		  
+		 }
+		    public List<NewUserModel>  checkall(NewUserModel newUser) {
+		  
+		  return mapper.checkall(newUser);
+		 }
+		    public List<NewUserModel> selectupdate(NewUserModel newUser){
+		     
+		  return mapper.selectupdate(newUser);
+		 }
+	
 	
 }

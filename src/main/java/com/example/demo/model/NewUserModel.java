@@ -7,7 +7,7 @@ import lombok.Data;
 public class NewUserModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-
+	private int id;
 	private String name;
 	private String password;
 	private String email;

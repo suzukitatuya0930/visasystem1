@@ -13,5 +13,9 @@ public interface NewUserMapper {
 	int insert(NewUserModel newUser);
 	int search(NewUserModel newUser);
 	List<NewUserModel> user(NewUserModel newUserModel);
-
+	
+	int delete(NewUserModel newUser);
+	 List<NewUserModel> checkall(NewUserModel newUserModel);
+	 List<NewUserModel> selectupdate(NewUserModel newUserModel);
+	 int update(NewUserModel newUser);
 }

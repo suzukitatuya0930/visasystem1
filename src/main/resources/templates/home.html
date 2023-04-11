@@ -4,9 +4,15 @@
 <title>home</title>
 </head>
 <body>
+ 
 
 <style>
+body {
+			background-color: lightslategrey;
+			font-family: Arial, sans-serif;
+		}
 table, th, td {
+	background :lemonchiffon;
   border: 1px solid black;
   text-align: center;
   
@@ -22,38 +28,40 @@ table.center {
   margin-bottom: auto;
 }
 #a{
-	  margin-left: auto; 
+   margin-left: auto; 
   margin-right: auto;
-	
+ 
 }
 h1{
-	text-align: center;
+ text-align: center;
 }
 </style>
 <div id="a">
-	<h1>ビザのリスト</h1>
-	<form th:action="@{/user/entry/}"method="POST">
+ <h1>ビザのリスト</h1>
+ <form th:action="@{/user/entry}"method="POST">
 <table class="center">
-	<thead>
+ <thead>
             <tr>
+    <th>ID</th>
                 <th>名前</th>
                 <th>ビザ期限</th>
                 <th>ビザ種類</th>
                 <th>残日数</th>
+                <th>削除/編集</th>
               
             </tr>
         </thead>
         <tbody>
             <tr th:each="listuser : ${listuser}">
+    <td th:text="${listuser.id}"></td>
                 <td th:text="${listuser.name}"></td>
-                <td th:text="${listuser.password}"></td>
-                <td th:text="${listuser.email}"></td>
                 <td th:text="${listuser.visa}"></td>
                 <td th:text="${listuser.visatype}"></td>
+                 <td><span th:text="${daysBetween}"></span></td>	
                 <td>
-					<a class="b" th:href="@{/delete/{id}(id=${listuser.id})}">削除</a>
-        			<a class="c" th:href="@{/update/{id}(id=${listuser.id})}">編集</a>
-				</td>
+     <a class="b" th:href="@{delete/{id}(id=${listuser.id})}">削除</a>
+           <a class="c" th:href="@{update/{id}(id=${listuser.id})}">編集</a>
+    </td>
             </tr>
          <tbody>
          

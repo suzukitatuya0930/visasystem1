@@ -14,6 +14,22 @@
  
           </select>
           
+          <select id="checkall"  resultType="com.example.demo.model.NewUserModel" parameterType="com.example.demo.model.NewUserModel">
+       SELECT id, name, visa, visatype FROM visasystem WHERE email != 'admin';
+
+    </select>
+
+    <delete id="delete" parameterType="com.example.demo.model.NewUserModel">
+     delete from visasystem where id=#{id}
+    </delete>
+     <select id="selectupdate"  resultType="com.example.demo.model.NewUserModel" parameterType="com.example.demo.model.NewUserModel">
+    SELECT*FROM visasystem WHERE id=#{id}
+    
+    </select>
+       <update id="update" parameterType="com.example.demo.model.NewUserModel">
+     Update visasystem set id=#{id},name=#{name}, visa=#{visa}, visatype=#{visatype} where id=#{id}
+    </update>
+          
           
           </mapper> 
            

@@ -9,8 +9,10 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -93,7 +95,6 @@ public class MainController {
 		       System.out.println(listuser);
 		       model.addAttribute("listuser",listuser);
 		       
-		      
 //			    // 今日の日付を取得する
 			    LocalDate today = LocalDate.now();
 			    
@@ -106,6 +107,7 @@ public class MainController {
 			    model.addAttribute("daysBetween", daysBetween);
 		      
 			 return "mypage";
+			 
 	}
 		 
 		
@@ -127,22 +129,64 @@ public class MainController {
 //      }
 //		 		  
 		  
-	@GetMapping("/update")
-	public String update() {
-        return "update";
-        }
 	
-	@PostMapping("/userupdate")
-	public String userupdate() {
-		
-        return "mypage";
-        }
+	
+	
+	
+	
+
+	
+	@GetMapping("/home")
+    public String home(Model model,NewUserModel newUserModel) {
+     List<NewUserModel> listuser=newUserService.checkall(newUserModel);
+     
+     model.addAttribute("listuser",listuser);
+     
+     
+     for(int i=0; i < listuser.size();i++) {
+    	LocalDate today = LocalDate.now();
+	    
+	    LocalDate dbDate = LocalDate.parse(listuser.get(i).getVisa());
+	    //
+	    // 日数の差分を計算する
+	    long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+	    model.addAttribute("daysBetween", daysBetween);
+     
+     
+     }
+        return "home";
+     
+    }
+
+	
+	@GetMapping("/delete/{id}")
+	public String getdelete(@PathVariable("id") int id, NewUserModel newUserModel) {
+		System.out.println(id);
+     newUserService.delete(newUserModel);
+     return "redirect:/user/home";
+  }
+  
+	@GetMapping("/update/{id}")
+	public String getupdateid(@PathVariable("id")  int id,Model model,NewUserModel newUserModel) {
+		List<NewUserModel> listuser=newUserService.selectupdate(newUserModel);
+		model.addAttribute("listuser",listuser);
+		return "update";
+ }
+	
+	@PostMapping("/update/{id}")
+	public String update(NewUserModel newUserModel, Model model,BindingResult result){
+		newUserService.update(newUserModel);
+		System.out.println(newUserService.update(newUserModel));
+		return "redirect:/user/home";
+ }
+
+	
+}	
 
 
 
-		  
 
-}
+
 	
 
 
