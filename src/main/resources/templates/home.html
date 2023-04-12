@@ -56,13 +56,21 @@
 			margin-left: auto;
 
 		}
+
+		.red-column {
+			color: red;
+		}
+
+		.green-column {
+			color: green;
+		}
 	</style>
 	<div id="a">
 		<h1>ビザのリスト</h1>
 
 
 		<table class="center">
-			<thead>
+			<thead style="color: green;">
 				<tr>
 					<th>ID</th>
 					<th>名前</th>
@@ -103,5 +111,16 @@
 		</table>
 	</div>
 </body>
+<script>
+	var rows = document.querySelectorAll('tr');
+	rows.forEach(function (row) {
+		var cell1Value = parseInt(row.cells[4].textContent);
+		if (cell1Value < 30) {
+			row.cells[4].classList.add('red-column');
+		} else {
+			row.cells[4].classList.add('green-column');
+		}
+	});
+</script>
 
 </html>
