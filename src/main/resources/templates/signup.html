@@ -4,73 +4,113 @@
     <meta charset="UTF-8" >
     <title >SignUp Page</title >
      <style>
-		body {
-			background-color: lightslategray;
-			font-family: arial, sans-serif;
-		}
-		form {
-			background-color: lemonchiffon;
-			padding: 20px;
-			border-radius: 5px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			width: 300px;
-			margin: 0 auto;
-		}
-		label, input {
-			display: block;
-			margin-bottom: 10px;
-		}
-		input[type="input"], input[type="password"],
-		input[type="email"],input[type="date"]{
-			padding: 10px;
-			border-radius: 5px;
-			background-color: #f2f2f2;
-			width: 100%;
-			box-sizing: border-box;
-			font-size: 16px;
-		}
-		button[type="submit"], button[type="reset"]{
-			background-color: red;
-			color: white;
-			border-radius: 5px;
-			padding: 10px 20px;
-			font-size: 16px;
-			cursor: pointer;
-		}
-		select {
-			padding: 10px;
-			border-radius: 5px;
-			background-color: #f2f2f2;
-			width: 100%;
-			box-sizing: border-box;
-			font-size: 16px;
-		}
+  h1{
+   background-color: black;
+   color: white;
+   border-radius: 5px;
+  }
+  body {
+   background-color: lightslategray;
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  form {
+   background-color: lemonchiffon;
+   padding: 30px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   width: 300px;
+   margin: 0 auto;
+  }
+  label, input {
+   display: block;
+   margin-bottom: 10px;
+  }
+  input[type="text"], input[type="password"],
+  input[type="email"],input[type="date"]{
+   padding: 10px;
+   border-radius: 5px;
+   background-color: #f2f2f2;
+   width: 100%;
+   box-sizing: border-box;
+   font-size: 16px;
+  }
+  a {
+   background-color: green;
+   color: white;
+   border-radius: 50px;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   
+  }
+  .b{
+   background-color: red;
+   color: white;
+   border-radius: 50px;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   
+  }
+  select {
+   padding: 10px;
+   border-radius: 5px;
+   background-color: #f2f2f2;
+   width: 100%;
+   box-sizing: border-box;
+   font-size: 16px;
+  }
 
-			option {
-  			padding: 5px;
-  			margin: 5px;
-		}
+   option {
+     padding: 5px;
+     margin: 5px;
+  }
+  a:hover,.b:hover{
+   background-color: black;
+  }
+  div {
+    display: inline-block;
+    margin-right: 10px; /* optional: add some space between each div */
+  }
 
-	</style>
+
+ </style>
 </head >
 <body >
-  <h1><b><center>新規登録画面へようこそ</center></b></h1>
 <form th:action="@{/user/entry}"method="post">
-	<h2 th:text="${id}"></h2><!--エラー文-->
-        <label for="name">Name</label>
-        <input type="input" class="form-control" id="name" name="name" placeholder="名前を入力してください"></p>
-        <p>
-        <label for="password">Password：</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="パスワードを入力してください"></p>
-        <p>
-        <label for="email">Email：</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレスを入力してください"></p>
-        <p>
-        <label for="visa">ビザ期限：</label>
-        <input type="date" class="form-control" id="visa" name="visa" placeholder="お持ちのビザの期限を入力してください"></p>
-	<p><label for="visatype">ビザ種類</label>
+ <div th:if="${id}">
+  <h2 th:text="${id}"></h2>
+</div>
+   <h1><b><center>新規登録画面</center></b></h1>
 
-		<select name="visatype">
+        <label for="name">名前</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="名前を入力してください" pattern="[A-Za-z\u3000-\u30FF]+" required>
+        <label for="password">パスワード</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="パスワードを入力してください" pattern="[A-Za-z0-9]+" required>
+     <label for="country">国籍</label>
+        <input type="text" class="form-control" id="country" name="country" placeholder="国籍を入力してください" required>
+  <label for="email">メールアドレス</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレスを入力してください" required>       
+        <label for="visa">ビザ期限</label>
+        <input type="date" class="form-control" id="visa" name="visa" required>
+  <label for="birth">生年月日</label>
+  <input type="date" class="form-control" id="birth" name="birth" required>
+  <label for="address">住所</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="住所を入力してください" required>
+  <label for="Gender">性別</label>
+  <div>
+    <label for="male">男
+   <input type="radio" id="male" name="gender" value="male">
+    </label>
+  </div>
+  <div>
+    <label for="female">女
+   <input type="radio" id="female" name="gender" value="female">
+    </label>
+  </div>
+
+  <p><label for="visatype">ビザ種類</label>
+  <select name="visatype">
 <option value="option">選択してください</option>
   <option value="留学">留学</option>
   <option value="技術・人文知識・国際業務">技術・人文知識・国際業務</option>
@@ -83,8 +123,11 @@
   <option value="法律・弁護士">法律・弁護士</option>
 </select></p>
 
-    <button type="submit">登録</button>
-     <button type="reset">キャンセル</button>
+<button type="submit">登録</button>
+
+<a class="b" th:href="@{/user/backlogin}">キャンセル</a></p>
+
+
 
     
 </form>

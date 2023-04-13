@@ -5,7 +5,7 @@
 <mapper namespace="com.example.demo.mapper.NewUserMapper">
 
 <insert id="insert" parameterType="com.example.demo.model.NewUserModel" useGeneratedKeys="true" >
-        INSERT INTO visasystem(name,password,email,visa,visatype) VALUES (#{name},#{password},#{email},#{visa},#{visatype})
+        INSERT INTO visasystem(name,password,email,gender,visa,visatype,country,birth,address) VALUES (#{name},#{password},#{email},#{gender},#{visa},#{visatype},#{country},#{birth},#{address})
     </insert>
     
     
@@ -15,7 +15,7 @@
           </select>
           
           <select id="checkall"  resultType="com.example.demo.model.NewUserModel" parameterType="com.example.demo.model.NewUserModel">
-       SELECT id, name, visa, visatype FROM visasystem WHERE email != 'admin';
+       SELECT * FROM visasystem WHERE email != 'admin';
 
     </select>
     
@@ -32,6 +32,13 @@
        <update id="update" parameterType="com.example.demo.model.NewUserModel">
      Update visasystem set id=#{id},name=#{name}, visa=#{visa}, visatype=#{visatype} where id=#{id}
     </update>
+          
+          <select id="searchUser" resultType="com.example.demo.model.NewUserModel">
+    SELECT * FROM visasystem WHERE name LIKE '%${search}%' OR visatype LIKE '%${search}%'
+	</select>
+	<select id="getAllUsers" resultType="com.example.demo.model.NewUserModel">
+    SELECT * FROM visasystem WHERE name LIKE '%${search}%' OR visatype LIKE '%${search}%'
+	</select>
           
           
           </mapper> 

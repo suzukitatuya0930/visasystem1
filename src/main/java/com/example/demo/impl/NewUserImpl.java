@@ -52,6 +52,12 @@ public class NewUserImpl implements NewUserService {
 		     
 		  return mapper.selectupdate(newUser);
 		 }
+		    
 	
+		    public List<NewUserModel> searchUser(String search) {
+		    	  // TODO 自動生成されたメソッド・スタブ
+		    	  return mapper.searchUser(search);
+		    	 }
+		    
 	
 }

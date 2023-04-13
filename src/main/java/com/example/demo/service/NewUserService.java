@@ -13,5 +13,5 @@ public interface NewUserService {
 	 public List<NewUserModel>checkall (NewUserModel newUserModel);
 	 public int update(NewUserModel newUserModel);
 	 public List<NewUserModel>selectupdate(NewUserModel newUserModel);
-
+	 public List<NewUserModel> searchUser(String search);
 }

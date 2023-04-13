@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserUpdateMapper">
+       
+          <select id="checkall"  resultType="com.example.demo.model.UserUpdateModel" parameterType="com.example.demo.model.UserUpdateModel">
+       SELECT id, name, visa, visatype FROM visasystem WHERE email != 'admin';
+
+    </select>
+    
+     <select id="userupdate"  resultType="com.example.demo.model.UserUpdateModel">
+    SELECT * FROM visasystem WHERE id=#{id}
+    
+    </select>
+    <select id="selectusername"  resultType="com.example.demo.model.UserUpdateModel">
+    SELECT * FROM visasystem WHERE email=#{email}
+    
+    </select>
+       <update id="update1" parameterType="com.example.demo.model.UserUpdateModel" keyProperty="id">
+     Update visasystem set id=#{id},name=#{name}, address=#{address},visa=#{visa}, visatype=#{visatype} where id=#{id}
+    </update>
+          
+          
+          </mapper> 
+           

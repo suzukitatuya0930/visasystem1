@@ -18,4 +18,5 @@ public interface NewUserMapper {
 	 List<NewUserModel> checkall(NewUserModel newUserModel);
 	 List<NewUserModel> selectupdate(NewUserModel newUserModel);
 	 int update(NewUserModel newUser);
+	 public List<NewUserModel> searchUser(String search);
 }

@@ -8,26 +8,18 @@
    background-color: lightslategrey;
    font-family: Arial, sans-serif;
   }
-  form {
+  table,th,td{
    background-color: lemonchiffon;
    padding: 20px;
    border-radius: 5px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    width: 300px;
-   margin: 0 auto;
-  }
-  label, input {
-   display: block;
-   margin-bottom: 10px;
-  }
-  input[type="email"], input[type="password"] {
-   padding: 10px;
-   border-radius: 5px;
-   background-color: #f2f2f2;
-   width: 100%;
-   box-sizing: border-box;
-   font-size: 16px;
-  }
+   margin-top: auto;
+   margin-bottom:auto;
+   margin-left: auto;
+   margin-right: auto;
+     }
+
   button[type="submit"]{
    background-color: red;
    color: white;
@@ -36,44 +28,66 @@
    font-size: 16px;
    cursor: pointer;
   }
+  
+   .b{
+   background-color: red;
+   color: white;
+   border-radius: 50px;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   text-align:center;
+   
+   
+  }
  </style>
-  <script src="/js/daysLeft.js"></script>
+ 
 </head >
 
 
 <body >
 
  <h1><center>マイページへようこそ</center></h1>
-</div>
+
 <form th:action="@{/user/mypage}"method="POST">
    <table>
         <tr>
+			<th>ID</th>
             <th>氏名</th>
+            <th>住所</th>
             <th>ビザ期限</th> 
        		<th>ビザ種類</th>
            <th>残り日数</th>
+           
  </tr>
         	<tr th:each="listuser: ${listuser}">
+		
+			<td><span th:text="${listuser.id}"></span></td> 
             <td><span th:text="${listuser.name}"></span></td> 
+            <td><span th:text="${listuser.address}"></span></td>
             <td><span th:text="${listuser.visa}"  id="expirationDate"></span></td>
             <td><span th:text="${listuser.visatype}"></span></td>
             <td><span th:text="${daysBetween}"></span></td>		
-            
+            <td>
+        <a class="" th:href="@{/user/update1/{id}(id=${listuser.id})}">編集</a>
+    </td>
         </tr>
     </table>
-</form>
+    
 
-<div class="btn-box">
-    <form th:action="@{/home}" method="POST">
-        
-            <button type="submit" class="btn" > 
-                ホームページ戻す
-               </button>
-              更新は<a th:href="@{/user/update}">こちら</a>
-    </form>
+   <a class="b" th:href="@{/user/backlogin}">ログアウト</a>
+
+
+
+
+ 
    
         
     </div>
+
+
 </form>
+
+
 </body >
 </html >

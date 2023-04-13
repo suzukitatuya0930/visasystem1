@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,11 +17,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.model.LoginUserModel;
 import com.example.demo.model.NewUserModel;
+import com.example.demo.model.UserUpdateModel;
 import com.example.demo.service.LoginUserService;
 import com.example.demo.service.NewUserService;
+import com.example.demo.service.UserUpdateService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -39,8 +43,13 @@ public class MainController {
     public String signup() {
         return "signup";
         }
+	//ログイン画面に戻る
+	@GetMapping("/backlogin")
+	public String backlogin() {
+		return"index";
+	}
 	
-//	
+
 	@Resource
     private NewUserService newUserService;
 	
@@ -71,30 +80,34 @@ public class MainController {
 	private LoginUserService loginUserService;
 	
 	@PostMapping("/login")
-	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model) {
+	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model,HttpSession session) {
 		 //idとパスワードが合っているか判断
 		//間違ってた場合login画面へ合っていたら,マイページへ
 		  int count =  (int)loginUserService.count(loginUserModel);
 		  if(count  == 0 ) {
-			  model.addAttribute("error","エラー");
+			  model.addAttribute("error","もう一度入力してください");
 			  
 			  return "index";
 		  }
+		  
 		
 		  else if(loginUserModel.getEmail().equals("admin@admin"))
 		 
 		 {
-			 
-			 
-			 return "home";
+			  
+			 return "redirect:/user/home";
 			 
 		}else {
 			 
 		 
 			
 			List<LoginUserModel> listuser=loginUserService.user(loginUserModel);
-		       System.out.println(listuser);
+			  session.setAttribute("email", loginUserModel.getEmail());
+		       
 		       model.addAttribute("listuser",listuser);
+		       
+		       String email = (String) session.getAttribute("email");
+		       System.out.println(email);
 		       
 //			    // 今日の日付を取得する
 			    LocalDate today = LocalDate.now();
@@ -129,13 +142,7 @@ public class MainController {
 //          return "mypage";
 //      }
 //		 		  
-		  
 	
-	
-	
-	
-	
-
 	@GetMapping("/home")
     public String home(Model model,NewUserModel newUserModel) {
      List<NewUserModel> listuser=newUserService.checkall(newUserModel);
@@ -157,7 +164,6 @@ public class MainController {
         return "home";
      
     }
-	
 	
 
 	@GetMapping("/delete/{id}")
@@ -192,9 +198,93 @@ public class MainController {
 		
 		
  }
+	//検索
+	@GetMapping("/search")
+	 public String search(@RequestParam(value = "q", required = false) String query,
+	                      @RequestParam(value = "type", required = false) String type,
+	                      Model model) {
+	     List<NewUserModel> listUser = new ArrayList<>();
+	     //find pulldown
+	     if (type != null && !type.trim().isEmpty()) {
+	         listUser = newUserService.searchUser(type);
+	     }
+	     //find text
+	     if (query != null && !query.trim().isEmpty()) {
+	         listUser = newUserService.searchUser(query);
+	     }
+	   
+	     model.addAttribute("listuser", listUser);
+
+	     List<Long> daysBetweenList = new ArrayList<>();
+	     LocalDate today = LocalDate.now();
+
+	     for (NewUserModel user : listUser) {
+	         LocalDate dbDate = LocalDate.parse(user.getVisa());
+	         long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+	         user.setRemaining(String.valueOf(daysBetween));
+	         System.out.println("Days between today and " + dbDate + " is " + daysBetween);
+	     }
+
+	     model.addAttribute("daysBetweenList", daysBetweenList);
+
+	     return "/home";
+	 }
+
+	@Autowired
+	private UserUpdateService userUpdateService;
+	
+	
+	@GetMapping("/update1/{id}")
+	public String getupdatd(@PathVariable("id")int id,Model model) {
+		System.out.println(id);
+		List<UserUpdateModel> listuser= userUpdateService.userupdate(id); //chi hien thi hang so ...
+		model.addAttribute("listuser",listuser);
+		return "userupdate";
+	}
+
+	@PostMapping("/update1/{id}")
+	public String update1(@PathVariable("id")int id,UserUpdateModel userUpdateModel, Model model){
+		System.out.println(id);
+		 userUpdateService.update1(userUpdateModel);
+		 List<UserUpdateModel> listuser= userUpdateService.userupdate(id); 
+			model.addAttribute("listuser",listuser);
+			LocalDate today = LocalDate.now();
+		    
+		    LocalDate dbDate = LocalDate.parse(listuser.get(0).getVisa());
+		    //
+		    // 日数の差分を計算する
+		    long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+
+		    // 結果をHTMLに表示する
+		    model.addAttribute("daysBetween", daysBetween);
+		return "mypage";
+		
+		}
+
+	@GetMapping("/mypage")
+	public String mypage(Model model,HttpSession session) {
+		String email = (String) session.getAttribute("email");
+		System.out.println(email);
+		List<UserUpdateModel> listuser = userUpdateService.selectusername(email);
+		model.addAttribute("listuser", listuser);
+		LocalDate today = LocalDate.now();
+	    
+	    LocalDate dbDate = LocalDate.parse(listuser.get(0).getVisa());
+	    //
+	    // 日数の差分を計算する
+	    long daysBetween = ChronoUnit.DAYS.between(today, dbDate);
+
+	    // 結果をHTMLに表示する
+	    model.addAttribute("daysBetween", daysBetween);
+	    
+        return "mypage";
+        }
 
 	
 }	
+
+
+
 
 
 

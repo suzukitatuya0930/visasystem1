@@ -7,12 +7,15 @@ import lombok.Data;
 @Data
 public class LoginUserModel implements Serializable{
 	
+	private int id;
 	private String name;
 	private String password;
 	private String email;
 	private String visa;
 	private String visatype;
 	private String remaining;
+	private String address;
+	
 	
 
 }

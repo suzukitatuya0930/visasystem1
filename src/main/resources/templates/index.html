@@ -46,8 +46,8 @@
  <h1><center>ログイン画面</center></h1>
 </div>
 <form th:action="@{/user/login}"method="POST">
- <div th:if="${msg}">
-  <h1 id="notify" th:text="${msg}"></h1>
+ <div th:if="${error}">
+  <h2 th:text="${error}"></h2>
 </div>
   <p>
         <label for="email">Email：</label>
@@ -61,7 +61,6 @@
 
   <p>  <button type="submit">ログイン</button><br></p>
 <p>新規登録は<a th:href="@{/user/signup}">こちら</a><br></p>
-パスワード忘れた場合は<a th:href="@{user/password}">こちら</a>
 
  
 

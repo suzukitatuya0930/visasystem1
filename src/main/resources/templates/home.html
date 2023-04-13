@@ -1,74 +1,130 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head charset="utf-8">
-<title>home</title>
-</head>
-<body>
- 
 
-<style>
-body {
+<head charset="utf-8">
+	<title>home</title>
+</head>
+
+<body>
+	<style>
+		body {
 			background-color: lightslategrey;
 			font-family: Arial, sans-serif;
 		}
-table, th, td {
-	background :lemonchiffon;
-  border: 1px solid black;
-  text-align: center;
-  
-}
 
-th, td {
-  padding: 10px;
-}
-table.center {
-  margin-left: auto; 
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-#a{
-   margin-left: auto; 
-  margin-right: auto;
- 
-}
-h1{
- text-align: center;
- }
- 
- a{
-    text-decoration: none;
-  width: 100px;
-  height: 50px;
-  border: 1px black solid;
-  font-size: 15px;
-  color: black;
-  background-color: rgb(192, 192, 192);
-  margin-left: auto;
-  
-  }
-</style>
+		table,
+		th,
+		td {
+			background: lemonchiffon;
+			border: 1px solid black;
+			text-align: center;
+
+		}
+
+		th,
+		td {
+			padding: 10px;
+		}
+
+		table.center {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		#a {
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		a {
+			text-decoration: none;
+			width: 100px;
+			height: 50px;
+			border: 1px black solid;
+			font-size: 15px;
+			color: black;
+			background-color: rgb(192, 192, 192);
+			margin-left: auto;
+
+		}
+
+		.red-column {
+			color: red;
+		}
+
+		.green-column {
+			color: green;
+		}
+
+		.logout-row {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	</style>
 <div id="a">
  <h1>ビザのリスト</h1>
- 
+<form th:action="@{/user/search}" method="get">
+
+
+			
+			<input type="text" name="q" placeholder="入力してください...">
+			<label for="search">ビザ種類</label>
+
+				<select name="type">
+					<option value="option">選択してください</option>
+					<option value="留学">留学</option>
+					<option value="技術・人文知識・国際業務">技術・人文知識・国際業務</option>
+					<option value="永住者">永住者</option>
+					<option value="特定活動">特定活動</option>
+					<option value="介護">介護</option>
+					<option value="技能">技能</option>
+					<option value="研修">研修</option>
+					<option value="教育">教育</option>
+					<option value="法律・弁護士">法律・弁護士</option>
+				</select>
+			<button type="submit">検索</button>
+		</form>
+		 
 
 <table class="center">
  <thead>
             <tr>
     			<th>ID</th>
                 <th>名前</th>
+                <th>生年月日</th>
+                <th>住居</th>
+                <th>国籍</th>
+                <th>メールアドレス</th>
                 <th>ビザ期限</th>
                 <th>ビザ種類</th>
-                <th>残日数</th>
+                <th>残日数
+                	<div>
+						<input type="button" value="∧" onclick="sortData('desc')">
+						<input type="button" value="∨" onclick="sortData('ascen')">
+					</div>
+					</th>
                 <th>削除/編集</th>
               
             </tr>
+            
         </thead>
         
         <tbody>
            		<tr th:each="listuser : ${listuser}">
     			<td th:text="${listuser.id}"></td>
                 <td th:text="${listuser.name}"></td>
+                <td th:text="${listuser.birth}"></td>
+                <td th:text="${listuser.address}"></td>
+                <td th:text="${listuser.country}"></td>
+                <td th:text="${listuser.email}"></td>
                 <td th:text="${listuser.visa}"></td>
                 <td th:text="${listuser.visatype}"></td>
                 <td th:text="${listuser.getRemaining()}"></td>
@@ -77,10 +133,64 @@ h1{
            <a class="c" th:href="@{update/{id}(id=${listuser.id})}">編集</a>
     </td>
             </tr>
-         <tbody>
+          
+            
          
         </table>
+       
+       <div class="btn-box">
+   <a class="b" th:href="@{/user/backlogin}">ログアウト</a></p>
+ 
+        
+        
+
 </div>
+</div>
+
+<script>
+	var rows = document.querySelectorAll('tr');
+	rows.forEach(function (row, index) {
+
+		if (index > 0) {
+			var cellValue = parseInt(row.cells[8].textContent);
+			if (cellValue < 30) {
+				row.cells[8].classList.add('red-column');
+			} else {
+				row.cells[8].classList.add('green-column');
+			}
+		}
+	});
+</script>
+<script>
+	function sortData(order) {
+		var table = document.querySelector("table");
+		var tbody = table.querySelector("tbody");
+		var rows = Array.from(tbody.querySelectorAll("tr"));
+		var logoutRow = tbody.querySelector("#logout-row");
+
+		var index = rows.indexOf(logoutRow);
+		if (index > -1) {
+			rows.splice(index, 1);
+		}
+		rows.sort(function (a, b) {
+			if (rows.indexOf(a) > 0 && rows.indexOf(b) > 0) {
+				var aVal = a.cells[8].innerText;
+				var bVal = b.cells[8].innerText;
+				if (order === 'desc') {
+					return bVal.localeCompare(aVal);
+				} else {
+					return aVal.localeCompare(bVal);
+				}
+			}
+		});
+		tbody.innerHTML = "";
+		rows.forEach(function (row) {
+			tbody.appendChild(row);
+		});
+		tbody.appendChild(logoutRow);
+	}
+</script>
+
 
 
 
