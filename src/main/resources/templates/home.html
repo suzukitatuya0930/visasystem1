@@ -170,7 +170,7 @@
 
 		var index = rows.indexOf(logoutRow);
 		if (index > -1) {
-			rows.splice(index, 1);
+			rows.splice(index, 0);
 		}
 		rows.sort(function (a, b) {
 			if (rows.indexOf(a) > 0 && rows.indexOf(b) > 0) {

@@ -43,6 +43,7 @@ public class MainController {
     public String signup() {
         return "signup";
         }
+	
 	//ログイン画面に戻る
 	@GetMapping("/backlogin")
 	public String backlogin() {
@@ -53,7 +54,7 @@ public class MainController {
 	@Resource
     private NewUserService newUserService;
 	
-	//新規登録画面
+	//新規登録画面ので処理
 	@PostMapping("/entry")
 	public String entry(@ModelAttribute NewUserModel newUserModel,Model model){
 		//既に登録されているメールアドレスか判断 
@@ -66,7 +67,7 @@ public class MainController {
 			
 		 }else {
 			  
-			 
+			 //既に登録されたメールアドレスが登録された場合
 			 newUserService.search(newUserModel);
 			model.addAttribute("id","既にメールアドレスが登録されています。");
 			  return "signup";
@@ -82,7 +83,7 @@ public class MainController {
 	@PostMapping("/login")
 	public String login(@ModelAttribute LoginUserModel loginUserModel, Model model,HttpSession session) {
 		 //idとパスワードが合っているか判断
-		//間違ってた場合login画面へ合っていたら,マイページへ
+		//間違ってた場合login画面へ
 		  int count =  (int)loginUserService.count(loginUserModel);
 		  if(count  == 0 ) {
 			  model.addAttribute("error","もう一度入力してください");
@@ -90,7 +91,7 @@ public class MainController {
 			  return "index";
 		  }
 		  
-		
+		//admin@adminと入力された場合ユーザ一覧画面へ
 		  else if(loginUserModel.getEmail().equals("admin@admin"))
 		 
 		 {
@@ -100,7 +101,7 @@ public class MainController {
 		}else {
 			 
 		 
-			
+			//メアドとパスワードが正しい場合マイページへ
 			List<LoginUserModel> listuser=loginUserService.user(loginUserModel);
 			  session.setAttribute("email", loginUserModel.getEmail());
 		       
@@ -145,6 +146,7 @@ public class MainController {
 	
 	@GetMapping("/home")
     public String home(Model model,NewUserModel newUserModel) {
+		//listでユーザの一覧を取得
      List<NewUserModel> listuser=newUserService.checkall(newUserModel);
      
      model.addAttribute("listuser",listuser);
@@ -165,7 +167,7 @@ public class MainController {
      
     }
 	
-
+//idを参照しデリート処理
 	@GetMapping("/delete/{id}")
 	   public String getdelete(@PathVariable("id") int id,Model model, NewUserModel newUserModel) {
 	    List<NewUserModel> listuser=newUserService.selectupdate(newUserModel);
@@ -183,6 +185,7 @@ public class MainController {
 	 
 	 }
   
+	//idを参照しアップデート処理
 	@GetMapping("/update/{id}")
 	public String getupdateid(@PathVariable("id")  int id,Model model,NewUserModel newUserModel) {
 		List<NewUserModel> listuser=newUserService.selectupdate(newUserModel);
@@ -198,7 +201,8 @@ public class MainController {
 		
 		
  }
-	//検索
+	
+	//検索処理
 	@GetMapping("/search")
 	 public String search(@RequestParam(value = "q", required = false) String query,
 	                      @RequestParam(value = "type", required = false) String type,
@@ -230,6 +234,8 @@ public class MainController {
 	     return "/home";
 	 }
 
+	
+	
 	@Autowired
 	private UserUpdateService userUpdateService;
 	
