@@ -86,7 +86,7 @@ public class MainController {
 		//間違ってた場合login画面へ
 		  int count =  (int)loginUserService.count(loginUserModel);
 		  if(count  == 0 ) {
-			  model.addAttribute("error","もう一度入力してください");
+			  model.addAttribute("error","メールアドレス又はパスワードが正しくありません");
 			  
 			  return "index";
 		  }

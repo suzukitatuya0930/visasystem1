@@ -1,0 +1,281 @@
+2023-04-13 09:24:25.365  INFO 2856 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 2856 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-13 09:24:25.371 DEBUG 2856 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-13 09:24:25.372  INFO 2856 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-13 09:24:25.478  INFO 2856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-13 09:24:25.479  INFO 2856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-13 09:24:27.092  INFO 2856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-13 09:24:27.109  INFO 2856 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-13 09:24:27.110  INFO 2856 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-13 09:24:27.216  INFO 2856 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-13 09:24:27.217  INFO 2856 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1737 ms
+2023-04-13 09:24:27.876  INFO 2856 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-13 09:24:28.219  INFO 2856 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-13 09:24:28.290  INFO 2856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 09:24:28.313  INFO 2856 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 3.56 seconds (JVM running for 4.589)
+2023-04-13 09:25:28.074  INFO 2856 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 09:25:28.075  INFO 2856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-13 09:25:28.077  INFO 2856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-13 09:25:49.890  WARN 2856 --- [http-nio-8080-exec-4] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [287] milliseconds.
+2023-04-13 09:25:49.931  INFO 2856 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-13 09:25:50.083  INFO 2856 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-13 09:25:50.094 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-13 09:25:50.117 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: t@a(String), t(String)
+2023-04-13 09:25:50.147 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-13 10:33:33.176 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-13 10:33:33.177 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: admin@admin(String), admin(String)
+2023-04-13 10:33:33.181 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-13 10:33:33.204 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 10:33:33.205 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 10:33:33.214 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 5
+2023-04-13 10:57:54.867 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 10:57:54.868 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 10:57:54.870 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:00:38.083 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 11:00:38.085 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 11:00:38.095 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 6
+2023-04-13 11:05:42.843 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 11:05:42.845 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 11:05:42.856 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 6
+2023-04-13 11:05:50.089 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:05:50.090 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:05:50.092 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:05:50.093 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%a%' OR visatype LIKE '%a%'
+2023-04-13 11:05:50.093 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:05:50.097 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 3
+2023-04-13 11:05:58.099 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%留学%' OR visatype LIKE '%留学%'
+2023-04-13 11:05:58.100 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:05:58.106 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 1
+2023-04-13 11:06:00.979 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%技能%' OR visatype LIKE '%技能%'
+2023-04-13 11:06:00.980 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:06:00.985 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:06:03.247 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%教育%' OR visatype LIKE '%教育%'
+2023-04-13 11:06:03.248 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:06:03.252 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 2
+2023-04-13 11:06:12.609 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%教育%' OR visatype LIKE '%教育%'
+2023-04-13 11:06:12.611 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:06:12.615 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 2
+2023-04-13 11:06:12.615 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%a%' OR visatype LIKE '%a%'
+2023-04-13 11:06:12.616 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:06:12.618 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 3
+2023-04-13 11:25:04.872 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 11:25:04.872 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 11:25:04.886 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 6
+2023-04-13 11:25:29.201 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:25:29.202 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:25:29.206 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:25:29.207 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%あ%' OR visatype LIKE '%あ%'
+2023-04-13 11:25:29.208 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:25:29.217 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 1
+2023-04-13 11:25:39.483 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:25:39.484 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:25:39.489 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:25:39.490 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%ｔ%' OR visatype LIKE '%ｔ%'
+2023-04-13 11:25:39.490 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:25:39.493 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:25:44.926 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:25:44.927 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:25:44.929 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:25:44.930 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%a%' OR visatype LIKE '%a%'
+2023-04-13 11:25:44.930 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:25:44.932 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 3
+2023-04-13 11:25:53.410 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%留学%' OR visatype LIKE '%留学%'
+2023-04-13 11:25:53.411 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:25:53.415 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 1
+2023-04-13 11:25:53.416 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%a%' OR visatype LIKE '%a%'
+2023-04-13 11:25:53.416 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:25:53.419 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 3
+2023-04-13 11:26:22.603 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.selectupdate  : ==>  Preparing: SELECT*FROM visasystem WHERE id=?
+2023-04-13 11:26:22.609 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.selectupdate  : ==> Parameters: 2(Integer)
+2023-04-13 11:26:22.613 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.selectupdate  : <==      Total: 1
+2023-04-13 11:26:24.391 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.selectupdate  : ==>  Preparing: SELECT*FROM visasystem WHERE id=?
+2023-04-13 11:26:24.392 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.selectupdate  : ==> Parameters: 11(Integer)
+2023-04-13 11:26:24.395 DEBUG 2856 --- [http-nio-8080-exec-10] c.e.d.mapper.NewUserMapper.selectupdate  : <==      Total: 1
+2023-04-13 11:26:37.441 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%特定活動%' OR visatype LIKE '%特定活動%'
+2023-04-13 11:26:37.442 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:26:37.447 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:26:40.013 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%永住者%' OR visatype LIKE '%永住者%'
+2023-04-13 11:26:40.013 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:26:40.019 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 2
+2023-04-13 11:49:35.392 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%永住者%' OR visatype LIKE '%永住者%'
+2023-04-13 11:49:35.393 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:49:35.395 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 2
+2023-04-13 11:49:42.063 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 11:49:42.064 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 11:49:42.071 DEBUG 2856 --- [http-nio-8080-exec-9] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 6
+2023-04-13 11:49:55.461 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:49:55.462 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:49:55.469 DEBUG 2856 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:50:51.581 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:50:51.582 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:50:51.587 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:50:51.587 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%q%' OR visatype LIKE '%q%'
+2023-04-13 11:50:51.588 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:50:51.590 DEBUG 2856 --- [http-nio-8080-exec-8] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:51:37.991 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:51:37.991 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:51:37.998 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:51:39.702 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:51:39.703 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:51:39.704 DEBUG 2856 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:51:45.198 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:51:45.200 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:51:45.203 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:51:45.204 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%a%' OR visatype LIKE '%a%'
+2023-04-13 11:51:45.204 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:51:45.206 DEBUG 2856 --- [http-nio-8080-exec-7] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 3
+2023-04-13 11:52:21.085 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 11:52:21.086 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 11:52:21.095 DEBUG 2856 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 6
+2023-04-13 11:52:26.526 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:52:26.527 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:52:26.529 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:52:26.530 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%a%' OR visatype LIKE '%a%'
+2023-04-13 11:52:26.532 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:52:26.534 DEBUG 2856 --- [http-nio-8080-exec-4] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 3
+2023-04-13 11:53:20.396 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%option%' OR visatype LIKE '%option%'
+2023-04-13 11:53:20.398 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:53:20.401 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 0
+2023-04-13 11:53:20.402 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : ==>  Preparing: SELECT * FROM visasystem WHERE name LIKE '%a%' OR visatype LIKE '%a%'
+2023-04-13 11:53:20.403 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : ==> Parameters: 
+2023-04-13 11:53:20.405 DEBUG 2856 --- [http-nio-8080-exec-3] c.e.d.mapper.NewUserMapper.searchUser    : <==      Total: 3
+2023-04-13 13:01:55.533  WARN 2856 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m32s624ms600µs100ns).
+2023-04-13 14:02:13.917  INFO 2856 --- [RMI TCP Connection(249)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-04-13 14:02:14.300  INFO 2856 --- [RMI TCP Connection(249)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-13 14:02:14.321  INFO 2856 --- [RMI TCP Connection(249)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-13 14:02:14.358  WARN 2856 --- [RMI TCP Connection(249)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+2023-04-13 14:02:14.418  INFO 2856 --- [RMI TCP Connection(249)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-13 14:02:14.434  INFO 2856 --- [RMI TCP Connection(249)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-13 14:02:21.934  INFO 20004 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 20004 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-13 14:02:21.937 DEBUG 20004 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-13 14:02:21.937  INFO 20004 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-13 14:02:22.020  INFO 20004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-13 14:02:22.020  INFO 20004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-13 14:02:23.634  INFO 20004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-13 14:02:23.669  INFO 20004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-13 14:02:23.669  INFO 20004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-13 14:02:23.799  INFO 20004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-13 14:02:23.799  INFO 20004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1778 ms
+2023-04-13 14:02:24.470  INFO 20004 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-13 14:02:24.782  INFO 20004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-13 14:02:24.846  INFO 20004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 14:02:24.864  INFO 20004 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 3.483 seconds (JVM running for 5.057)
+2023-04-13 14:02:27.910  INFO 20004 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 14:02:27.911  INFO 20004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-13 14:02:27.913  INFO 20004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-13 14:02:33.947  INFO 20004 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-13 14:02:34.142  INFO 20004 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-13 14:02:34.155 DEBUG 20004 --- [http-nio-8080-exec-4] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 14:02:34.177 DEBUG 20004 --- [http-nio-8080-exec-4] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 14:02:34.207 DEBUG 20004 --- [http-nio-8080-exec-4] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 6
+2023-04-13 14:04:34.641  INFO 20004 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-04-13 14:04:34.823  INFO 20004 --- [RMI TCP Connection(9)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-13 14:04:34.826  INFO 20004 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-13 14:04:34.831  WARN 20004 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+2023-04-13 14:04:34.841  INFO 20004 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-13 14:04:34.847  INFO 20004 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-13 14:04:37.737  INFO 6196 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 6196 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-13 14:04:37.739 DEBUG 6196 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-13 14:04:37.740  INFO 6196 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-13 14:04:37.812  INFO 6196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-13 14:04:37.813  INFO 6196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-13 14:04:39.264  INFO 6196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-13 14:04:39.281  INFO 6196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-13 14:04:39.282  INFO 6196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-13 14:04:39.386  INFO 6196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-13 14:04:39.386  INFO 6196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1572 ms
+2023-04-13 14:04:40.000  INFO 6196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-13 14:04:40.271  INFO 6196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-13 14:04:40.325  INFO 6196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 14:04:40.342  INFO 6196 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 3.112 seconds (JVM running for 4.241)
+2023-04-13 14:08:03.139  INFO 6196 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 14:08:03.140  INFO 6196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-13 14:08:03.142  INFO 6196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-13 14:08:03.223  INFO 6196 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-13 14:08:03.387  INFO 6196 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-13 14:08:03.402 DEBUG 6196 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.selectupdate  : ==>  Preparing: SELECT*FROM visasystem WHERE id=?
+2023-04-13 14:08:03.443 DEBUG 6196 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.selectupdate  : ==> Parameters: 8(Integer)
+2023-04-13 14:08:03.472 DEBUG 6196 --- [http-nio-8080-exec-1] c.e.d.mapper.NewUserMapper.selectupdate  : <==      Total: 1
+2023-04-13 14:08:08.452 DEBUG 6196 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.selectupdate  : ==>  Preparing: SELECT*FROM visasystem WHERE id=?
+2023-04-13 14:08:08.454 DEBUG 6196 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.selectupdate  : ==> Parameters: 8(Integer)
+2023-04-13 14:08:08.457 DEBUG 6196 --- [http-nio-8080-exec-2] c.e.d.mapper.NewUserMapper.selectupdate  : <==      Total: 1
+2023-04-13 14:08:08.459 DEBUG 6196 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.delete     : ==>  Preparing: delete from visasystem where id=?
+2023-04-13 14:08:08.459 DEBUG 6196 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.delete     : ==> Parameters: 8(Integer)
+2023-04-13 14:08:08.472 DEBUG 6196 --- [http-nio-8080-exec-2] c.e.demo.mapper.NewUserMapper.delete     : <==    Updates: 1
+2023-04-13 14:08:08.482 DEBUG 6196 --- [http-nio-8080-exec-3] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 14:08:08.482 DEBUG 6196 --- [http-nio-8080-exec-3] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 14:08:08.488 DEBUG 6196 --- [http-nio-8080-exec-3] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 5
+2023-04-13 14:56:28.984  INFO 6196 --- [RMI TCP Connection(60)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-04-13 14:56:29.200  INFO 6196 --- [RMI TCP Connection(60)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-13 14:56:29.203  INFO 6196 --- [RMI TCP Connection(60)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-13 14:56:29.207  WARN 6196 --- [RMI TCP Connection(60)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.2/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+2023-04-13 14:56:29.219  INFO 6196 --- [RMI TCP Connection(60)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-13 14:56:29.226  INFO 6196 --- [RMI TCP Connection(60)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-13 14:56:32.192  INFO 19044 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Starting VisasystemtestApplication using Java 11.0.2 on DESKTOP-GCLA82M with PID 19044 (C:\Users\鈴木達也\git\visa\target\classes started by 鈴木達也 in C:\Users\鈴木達也\git\visa)
+2023-04-13 14:56:32.194 DEBUG 19044 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-13 14:56:32.195  INFO 19044 --- [restartedMain] c.e.demo.VisasystemtestApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-13 14:56:32.266  INFO 19044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-13 14:56:32.267  INFO 19044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-13 14:56:33.702  INFO 19044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-13 14:56:33.718  INFO 19044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-13 14:56:33.719  INFO 19044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-13 14:56:33.820  INFO 19044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-13 14:56:33.820  INFO 19044 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1552 ms
+2023-04-13 14:56:34.435  INFO 19044 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-13 14:56:34.766  INFO 19044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-13 14:56:34.830  INFO 19044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 14:56:34.846  INFO 19044 --- [restartedMain] c.e.demo.VisasystemtestApplication       : Started VisasystemtestApplication in 3.177 seconds (JVM running for 4.35)
+2023-04-13 14:56:37.831  INFO 19044 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 14:56:37.837  INFO 19044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-13 14:56:37.840  INFO 19044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-13 14:56:58.599  INFO 19044 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-13 14:56:58.741  INFO 19044 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-13 14:56:58.754 DEBUG 19044 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.search     : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=?
+2023-04-13 14:56:58.778 DEBUG 19044 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.search     : ==> Parameters: q@q(String)
+2023-04-13 14:56:58.808 DEBUG 19044 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.search     : <==      Total: 1
+2023-04-13 14:56:58.817 DEBUG 19044 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.insert     : ==>  Preparing: INSERT INTO visasystem(name,password,email,gender,visa,visatype,country,birth,address) VALUES (?,?,?,?,?,?,?,?,?)
+2023-04-13 14:56:58.818 DEBUG 19044 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.insert     : ==> Parameters: q(String), q(String), q@q(String), male(String), 2023-04-14(String), 介護(String), q(String), 2023-04-15(String), q(String)
+2023-04-13 14:56:58.833 DEBUG 19044 --- [http-nio-8080-exec-7] c.e.demo.mapper.NewUserMapper.insert     : <==    Updates: 1
+2023-04-13 17:38:19.865  WARN 19044 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [404] milliseconds.
+2023-04-13 17:38:19.890 DEBUG 19044 --- [http-nio-8080-exec-3] c.e.demo.mapper.LoginUserMapper.count    : ==>  Preparing: SELECT COUNT(email) FROM visasystem where email=? and password=?
+2023-04-13 17:38:19.892 DEBUG 19044 --- [http-nio-8080-exec-3] c.e.demo.mapper.LoginUserMapper.count    : ==> Parameters: admin@admin(String), admin(String)
+2023-04-13 17:38:19.897 DEBUG 19044 --- [http-nio-8080-exec-3] c.e.demo.mapper.LoginUserMapper.count    : <==      Total: 1
+2023-04-13 17:38:19.928 DEBUG 19044 --- [http-nio-8080-exec-4] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 17:38:19.929 DEBUG 19044 --- [http-nio-8080-exec-4] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 17:38:19.937 DEBUG 19044 --- [http-nio-8080-exec-4] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 9
+2023-04-13 17:38:22.987 DEBUG 19044 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.selectupdate  : ==>  Preparing: SELECT*FROM visasystem WHERE id=?
+2023-04-13 17:38:22.995 DEBUG 19044 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.selectupdate  : ==> Parameters: 1(Integer)
+2023-04-13 17:38:23.001 DEBUG 19044 --- [http-nio-8080-exec-5] c.e.d.mapper.NewUserMapper.selectupdate  : <==      Total: 1
+2023-04-13 17:38:29.664 DEBUG 19044 --- [http-nio-8080-exec-8] c.e.demo.mapper.NewUserMapper.checkall   : ==>  Preparing: SELECT * FROM visasystem WHERE email != 'admin';
+2023-04-13 17:38:29.666 DEBUG 19044 --- [http-nio-8080-exec-8] c.e.demo.mapper.NewUserMapper.checkall   : ==> Parameters: 
+2023-04-13 17:38:29.681 DEBUG 19044 --- [http-nio-8080-exec-8] c.e.demo.mapper.NewUserMapper.checkall   : <==      Total: 9
+2023-04-13 17:38:32.038 DEBUG 19044 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.selectupdate  : ==>  Preparing: SELECT*FROM visasystem WHERE id=?
+2023-04-13 17:38:32.039 DEBUG 19044 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.selectupdate  : ==> Parameters: 17(Integer)
+2023-04-13 17:38:32.041 DEBUG 19044 --- [http-nio-8080-exec-9] c.e.d.mapper.NewUserMapper.selectupdate  : <==      Total: 1
+2023-04-13 18:18:22.112  WARN 19044 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s941ms124µs900ns).
